@@ -9,9 +9,10 @@ import Foundation
 import UIKit
 
 
-enum TabbarImageEnums {
+enum SystemImageEnums {
     case house
     case favorite
+    case forward
 
     var rawValue: String {
         switch self {
@@ -19,6 +20,8 @@ enum TabbarImageEnums {
             return "house"
         case .favorite:
             return "heart"
+        case .forward:
+            return "chevron.forward"
         }
         
     }
@@ -27,7 +30,7 @@ enum TabbarImageEnums {
         return UIImage(systemName: "\(rawValue).fill")
     }
     
-    var toUnselected: UIImage? {
+    var normal: UIImage? {
         return UIImage(systemName: rawValue)
     }
     

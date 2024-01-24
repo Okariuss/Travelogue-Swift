@@ -25,8 +25,8 @@ extension Theme {
                 onboardUnselectedCircleColor: .onboardUnselectedCircle
             ),
             themeFont: ThemeFont(
-                headlineFont: .systemFont(ofSize: TextSizeEnums.headline.rawValue),
-                bodyFont: .systemFont(ofSize: TextSizeEnums.body.rawValue)
+                headlineFont: .systemFont(ofSize: TextSizeEnums.subHeadline.rawValue),
+                bodyFont: .systemFont(ofSize: TextSizeEnums.caption.rawValue)
             )
         )
     }

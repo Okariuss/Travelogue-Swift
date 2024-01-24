@@ -13,7 +13,7 @@
 		EB20B91C2B51776700848184 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B91B2B51776700848184 /* HomeViewController.swift */; };
 		EB20B91E2B51777800848184 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B91D2B51777800848184 /* FavoriteViewController.swift */; };
 		EB20B9212B51787E00848184 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B9202B51787E00848184 /* StringConstants.swift */; };
-		EB20B9242B517A6300848184 /* TabbarImageEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B9232B517A6300848184 /* TabbarImageEnums.swift */; };
+		EB20B9242B517A6300848184 /* SystemImageEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B9232B517A6300848184 /* SystemImageEnums.swift */; };
 		EB20B9272B518F2A00848184 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EB20B9262B518F2A00848184 /* Lottie */; };
 		EB20B92F2B51A0BB00848184 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B92E2B51A0BB00848184 /* LaunchScreenViewController.swift */; };
 		EB20B9342B51B22400848184 /* AnimationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B9332B51B22400848184 /* AnimationEnums.swift */; };
@@ -29,6 +29,11 @@
 		EB53E5EF2B612A2D00578E86 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53E5EE2B612A2C00578E86 /* ThemeColor.swift */; };
 		EB53E5F12B612A3500578E86 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53E5F02B612A3500578E86 /* ThemeFont.swift */; };
 		EB53E5F42B612FDA00578E86 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53E5F32B612FDA00578E86 /* UIFont+Extensions.swift */; };
+		EB53E5F72B6139A600578E86 /* OnboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53E5F62B6139A600578E86 /* OnboardModel.swift */; };
+		EB53E5F92B613A1400578E86 /* OnboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53E5F82B613A1400578E86 /* OnboardViewModel.swift */; };
+		EB53E5FB2B6144D300578E86 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53E5FA2B6144D300578E86 /* Collection.swift */; };
+		EB53E5FE2B616C2800578E86 /* CacheItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53E5FD2B616C2800578E86 /* CacheItems.swift */; };
+		EB53E6022B6173FD00578E86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53E6012B6173FD00578E86 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +45,7 @@
 		EB20B91B2B51776700848184 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EB20B91D2B51777800848184 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		EB20B9202B51787E00848184 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
-		EB20B9232B517A6300848184 /* TabbarImageEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarImageEnums.swift; sourceTree = "<group>"; };
+		EB20B9232B517A6300848184 /* SystemImageEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImageEnums.swift; sourceTree = "<group>"; };
 		EB20B92E2B51A0BB00848184 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		EB20B9332B51B22400848184 /* AnimationEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEnums.swift; sourceTree = "<group>"; };
 		EB20B9352B51B91900848184 /* ImageSizeEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSizeEnums.swift; sourceTree = "<group>"; };
@@ -55,6 +60,11 @@
 		EB53E5EE2B612A2C00578E86 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		EB53E5F02B612A3500578E86 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		EB53E5F32B612FDA00578E86 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		EB53E5F62B6139A600578E86 /* OnboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardModel.swift; sourceTree = "<group>"; };
+		EB53E5F82B613A1400578E86 /* OnboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewModel.swift; sourceTree = "<group>"; };
+		EB53E5FA2B6144D300578E86 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		EB53E5FD2B616C2800578E86 /* CacheItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheItems.swift; sourceTree = "<group>"; };
+		EB53E6012B6173FD00578E86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,7 @@
 		EB20B9132B516CCC00848184 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				EB53E5FF2B6173E500578E86 /* Auth */,
 				EB53E5E12B61204000578E86 /* Onboard */,
 				EB20B91A2B51771200848184 /* Favorite */,
 				EB20B9192B51770000848184 /* Home */,
@@ -118,6 +129,7 @@
 		EB20B9142B516CD300848184 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EB53E5FC2B616BF400578E86 /* Enum */,
 				EB53E5F22B612FC500578E86 /* Extensions */,
 				EB53E5EA2B61296E00578E86 /* Init */,
 				EB20B93D2B51D64E00848184 /* Fonts */,
@@ -192,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				EB53E5E22B61206E00578E86 /* OnboardViewController.swift */,
+				EB53E5F62B6139A600578E86 /* OnboardModel.swift */,
+				EB53E5F82B613A1400578E86 /* OnboardViewModel.swift */,
 			);
 			path = Onboard;
 			sourceTree = "<group>";
@@ -209,7 +223,7 @@
 		EB53E5E52B6120EA00578E86 /* Path */ = {
 			isa = PBXGroup;
 			children = (
-				EB20B9232B517A6300848184 /* TabbarImageEnums.swift */,
+				EB20B9232B517A6300848184 /* SystemImageEnums.swift */,
 				EB20B9332B51B22400848184 /* AnimationEnums.swift */,
 				EB20B9392B51CBD400848184 /* ImageEnums.swift */,
 			);
@@ -238,8 +252,33 @@
 			isa = PBXGroup;
 			children = (
 				EB53E5F32B612FDA00578E86 /* UIFont+Extensions.swift */,
+				EB53E5FA2B6144D300578E86 /* Collection.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EB53E5FC2B616BF400578E86 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				EB53E5FD2B616C2800578E86 /* CacheItems.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		EB53E5FF2B6173E500578E86 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EB53E6002B6173EF00578E86 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EB53E6002B6173EF00578E86 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EB53E6012B6173FD00578E86 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,7 +359,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB53E5F42B612FDA00578E86 /* UIFont+Extensions.swift in Sources */,
+				EB53E5FE2B616C2800578E86 /* CacheItems.swift in Sources */,
 				EB20B9182B51743D00848184 /* MainTabbarViewController.swift in Sources */,
+				EB53E6022B6173FD00578E86 /* LoginViewController.swift in Sources */,
 				EB20B9432B51E25F00848184 /* SpaceEnums.swift in Sources */,
 				EB20B8FF2B516C3300848184 /* AppDelegate.swift in Sources */,
 				EB20B93A2B51CBD400848184 /* ImageEnums.swift in Sources */,
@@ -331,10 +372,13 @@
 				EB20B93C2B51D37A00848184 /* TextSizeEnums.swift in Sources */,
 				EB53E5ED2B61299000578E86 /* Theme.swift in Sources */,
 				EB53E5E32B61206E00578E86 /* OnboardViewController.swift in Sources */,
+				EB53E5FB2B6144D300578E86 /* Collection.swift in Sources */,
 				EB53E5F12B612A3500578E86 /* ThemeFont.swift in Sources */,
 				EB20B9012B516C3300848184 /* SceneDelegate.swift in Sources */,
+				EB53E5F92B613A1400578E86 /* OnboardViewModel.swift in Sources */,
 				EB20B91C2B51776700848184 /* HomeViewController.swift in Sources */,
-				EB20B9242B517A6300848184 /* TabbarImageEnums.swift in Sources */,
+				EB53E5F72B6139A600578E86 /* OnboardModel.swift in Sources */,
+				EB20B9242B517A6300848184 /* SystemImageEnums.swift in Sources */,
 				EB20B9362B51B91900848184 /* ImageSizeEnums.swift in Sources */,
 				EB20B91E2B51777800848184 /* FavoriteViewController.swift in Sources */,
 			);

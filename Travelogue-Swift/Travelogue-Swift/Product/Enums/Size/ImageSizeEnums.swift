@@ -10,6 +10,7 @@ import Foundation
 enum ImageSizeEnums {
     case normal
     case medium
+    case high
 
     var rawValue: Int {
         switch self {
@@ -17,6 +18,8 @@ enum ImageSizeEnums {
             return 128
         case .medium:
             return 256
+        case .high:
+            return 512
         }
         
     }

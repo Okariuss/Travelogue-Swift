@@ -61,7 +61,7 @@ class LaunchScreenViewController: UIViewController {
     
     private func skipSplash() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-            let viewController = MainTabbarViewController()
+            let viewController = CacheItems.isFirst.readBool ?  OnboardViewController() : (CacheItems.isLogin.readBool ? MainTabbarViewController() : LoginViewController())
             viewController.modalTransitionStyle = .crossDissolve
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true)
