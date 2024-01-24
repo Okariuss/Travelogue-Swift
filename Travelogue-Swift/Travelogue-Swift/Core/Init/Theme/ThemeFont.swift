@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import UIKit
+
+struct ThemeFont {
+    let headlineFont: UIFont
+    let bodyFont: UIFont
+}

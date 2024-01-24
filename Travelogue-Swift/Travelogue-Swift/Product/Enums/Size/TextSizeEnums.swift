@@ -9,20 +9,23 @@ import Foundation
 
 
 enum TextSizeEnums {
-    case small
-    case normal
-    case large
-    case extraLarge
+    case smallCaption
+    case caption
+    case body
+    case subHeadline
+    case headline
     
     var rawValue: CGFloat {
         switch self {
-        case .small:
-            return 8
-        case .normal:
+        case .smallCaption:
             return 16
-        case .large:
+        case .caption:
+            return 20
+        case .body:
+            return 28
+        case .subHeadline:
             return 32
-        case .extraLarge:
+        case .headline:
             return 64
         }
     }

@@ -10,9 +10,9 @@ import Lottie
 
 class LaunchScreenViewController: UIViewController {
     
-    let planeAnimationView: LottieAnimationView = createAnim(name: AnimationEnums.plane.getAnimName)
+    private let planeAnimationView: LottieAnimationView = createAnim(name: AnimationEnums.plane.getAnimName)
     
-    let appIconView: UIImageView = {
+    private let appIconView: UIImageView = {
         let appIcon = UIImageView(frame: .zero)
         appIcon.image = ImageEnums.icon.toImage
         appIcon.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +20,7 @@ class LaunchScreenViewController: UIViewController {
         return appIcon
     }()
     
-    let travelogueSplashTextView: UILabel = {
+    private let travelogueSplashTextView: UILabel = {
         let text = UILabel()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.text = StringConstants.appName
@@ -28,7 +28,7 @@ class LaunchScreenViewController: UIViewController {
         return text
     }()
     
-    let splashTextView: UILabel = {
+    private let splashTextView: UILabel = {
         let text = UILabel()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.text = StringConstants.splashText
@@ -36,7 +36,7 @@ class LaunchScreenViewController: UIViewController {
         return text
     }()
     
-    let busAnimationView: LottieAnimationView = createAnim(name: AnimationEnums.bus.getAnimName)
+    private let busAnimationView: LottieAnimationView = createAnim(name: AnimationEnums.bus.getAnimName)
     
     
     override func viewDidLoad() {
@@ -49,7 +49,7 @@ class LaunchScreenViewController: UIViewController {
         
     }
     
-     func setDesign() {
+    private func setDesign() {
         view.addSubview(planeAnimationView)
         view.addSubview(appIconView)
         view.addSubview(travelogueSplashTextView)
@@ -59,7 +59,7 @@ class LaunchScreenViewController: UIViewController {
         configureConstraints()
     }
     
-     func skipSplash() {
+    private func skipSplash() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
             let viewController = MainTabbarViewController()
             viewController.modalTransitionStyle = .crossDissolve
@@ -68,12 +68,70 @@ class LaunchScreenViewController: UIViewController {
         }
     }
     
-     func configureConstraints() {
+    fileprivate func configureConstraints() {
         
         LaunchScreenViewController.topSplashItemsConfigureConstraints(in: self)
         LaunchScreenViewController.centerSplashItemsConfigureConstraints(in: self)
         LaunchScreenViewController.bottomSplashItemsConfigureConstraints(in: self)
     }
 
+}
+
+extension LaunchScreenViewController {
+     static func createAnim(name: String) -> LottieAnimationView {
+         let anim = LottieAnimationView(name: name)
+         anim.translatesAutoresizingMaskIntoConstraints = false
+         anim.contentMode = .scaleAspectFit
+         anim.loopMode = .loop
+         anim.play()
+         return anim
+    }
+    
+    static func topSplashItemsConfigureConstraints(in viewController: LaunchScreenViewController) {
+        let planeAnimationViewConstraints = [
+            viewController.planeAnimationView.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor),
+            viewController.planeAnimationView.topAnchor.constraint(equalTo: viewController.view.topAnchor, constant: SpaceEnums.normal.rawValue),
+            viewController.planeAnimationView.widthAnchor.constraint(equalToConstant: CGFloat(ImageSizeEnums.normal.rawValue)),
+            viewController.planeAnimationView.heightAnchor.constraint(equalToConstant: CGFloat(ImageSizeEnums.normal.rawValue))
+        ]
+        
+        let appIconViewConstraints = [
+            viewController.appIconView.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor),
+            viewController.appIconView.topAnchor.constraint(equalTo: viewController.planeAnimationView.bottomAnchor),
+            viewController.appIconView.widthAnchor.constraint(equalToConstant: CGFloat(ImageSizeEnums.medium.rawValue)),
+            viewController.appIconView.heightAnchor.constraint(equalToConstant: CGFloat(ImageSizeEnums.medium.rawValue))
+        ]
+        
+        NSLayoutConstraint.activate(planeAnimationViewConstraints)
+        NSLayoutConstraint.activate(appIconViewConstraints)
+    }
+    
+    static func centerSplashItemsConfigureConstraints(in viewController: LaunchScreenViewController) {
+        
+        let travelogueSplashViewConstraints = [
+            viewController.travelogueSplashTextView.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor),
+            viewController.travelogueSplashTextView.topAnchor.constraint(equalTo: viewController.appIconView.bottomAnchor, constant: SpaceEnums.small.rawValue)
+        ]
+        
+        let splashTextViewConstraints = [
+            viewController.splashTextView.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor),
+            viewController.splashTextView.topAnchor.constraint(equalTo: viewController.travelogueSplashTextView.bottomAnchor, constant: SpaceEnums.small.rawValue)
+        ]
+        
+        NSLayoutConstraint.activate(travelogueSplashViewConstraints)
+        NSLayoutConstraint.activate(splashTextViewConstraints)
+    }
+    
+    static func bottomSplashItemsConfigureConstraints(in viewController: LaunchScreenViewController) {
+        let busAnimationViewConstraints = [
+            viewController.busAnimationView.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor),
+            viewController.busAnimationView.bottomAnchor.constraint(equalTo: viewController.view.bottomAnchor, constant: -SpaceEnums.normal.rawValue),
+            viewController.busAnimationView.widthAnchor.constraint(equalToConstant: CGFloat(ImageSizeEnums.normal.rawValue)),
+            viewController.busAnimationView.heightAnchor.constraint(equalToConstant: CGFloat(ImageSizeEnums.normal.rawValue))
+        ]
+        
+        
+        NSLayoutConstraint.activate(busAnimationViewConstraints)
+    }
 }
 

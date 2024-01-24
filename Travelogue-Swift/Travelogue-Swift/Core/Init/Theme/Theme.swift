@@ -6,3 +6,28 @@
 //
 
 import Foundation
+import UIKit
+
+struct Theme {
+    let themeColor: ThemeColor
+    let themeFont: ThemeFont
+}
+
+
+extension Theme {
+    static var defaultTheme: Theme {
+        return Theme(
+            themeColor: ThemeColor(
+                appBackgroundColor: .appBackground,
+                onboardBackgroundColor: .onboardBackground,
+                onboardLabelColor: .onboardLabel,
+                onboardSelectedCircleColor: .onboardSelectedCircle,
+                onboardUnselectedCircleColor: .onboardUnselectedCircle
+            ),
+            themeFont: ThemeFont(
+                headlineFont: .systemFont(ofSize: TextSizeEnums.headline.rawValue),
+                bodyFont: .systemFont(ofSize: TextSizeEnums.body.rawValue)
+            )
+        )
+    }
+}

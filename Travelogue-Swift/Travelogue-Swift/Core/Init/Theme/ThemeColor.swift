@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import UIKit
+
+
+struct ThemeColor {
+    let appBackgroundColor: UIColor
+    let onboardBackgroundColor: UIColor
+    let onboardLabelColor: UIColor
+    let onboardSelectedCircleColor: UIColor
+    let onboardUnselectedCircleColor: UIColor
+}
