@@ -21,9 +21,9 @@ class MainTabbarViewController: UITabBarController {
 
 private extension MainTabbarViewController {
     private func setTabs() {
-        let homeVC = generateTab(on: HomeViewController(), image: TabbarImageEnums.house.toUnselected!, selectedImage: TabbarImageEnums.house.toSelected!)
+        let homeVC = generateTab(on: HomeViewController(), image: SystemImageEnums.house.normal!, selectedImage: SystemImageEnums.house.toSelected!)
         
-        let favoriteVC = generateTab(on: FavoriteViewController(), image: TabbarImageEnums.favorite.toUnselected!, selectedImage: TabbarImageEnums.favorite.toSelected!)
+        let favoriteVC = generateTab(on: FavoriteViewController(), image: SystemImageEnums.favorite.normal!, selectedImage: SystemImageEnums.favorite.toSelected!)
         
         setViewControllers([homeVC, favoriteVC], animated: true)
     }

@@ -24,7 +24,7 @@ class LaunchScreenViewController: UIViewController {
         let text = UILabel()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.text = StringConstants.appName
-        text.font = UIFont(name: StringConstants.bilboSwashCaps, size: TextSizeEnums.extraLarge.rawValue)
+        text.font = UIFont(name: StringConstants.bilboSwashCaps, size: TextSizeEnums.headline.rawValue)?.boldVersion
         return text
     }()
     
@@ -32,7 +32,7 @@ class LaunchScreenViewController: UIViewController {
         let text = UILabel()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.text = StringConstants.splashText
-        text.font = UIFont(name: StringConstants.aldrich, size: TextSizeEnums.normal.rawValue)
+        text.font = UIFont(name: StringConstants.aldrich, size: TextSizeEnums.caption.rawValue)
         return text
     }()
     
@@ -61,14 +61,14 @@ class LaunchScreenViewController: UIViewController {
     
     private func skipSplash() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-            let viewController = MainTabbarViewController()
+            let viewController = CacheItems.isFirst.readBool ?  OnboardViewController() : (CacheItems.isLogin.readBool ? MainTabbarViewController() : LoginViewController())
             viewController.modalTransitionStyle = .crossDissolve
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true)
         }
     }
     
-    private func configureConstraints() {
+    fileprivate func configureConstraints() {
         
         LaunchScreenViewController.topSplashItemsConfigureConstraints(in: self)
         LaunchScreenViewController.centerSplashItemsConfigureConstraints(in: self)
@@ -77,7 +77,7 @@ class LaunchScreenViewController: UIViewController {
 
 }
 
-private extension LaunchScreenViewController {
+extension LaunchScreenViewController {
      static func createAnim(name: String) -> LottieAnimationView {
          let anim = LottieAnimationView(name: name)
          anim.translatesAutoresizingMaskIntoConstraints = false
@@ -134,3 +134,4 @@ private extension LaunchScreenViewController {
         NSLayoutConstraint.activate(busAnimationViewConstraints)
     }
 }
+

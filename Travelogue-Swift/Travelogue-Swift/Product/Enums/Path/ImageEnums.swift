@@ -11,12 +11,21 @@ import UIKit
 
 enum ImageEnums {
     case icon
+    case hotel
+    case needHelp
+    case travel
     
 
     var rawValue: String {
         switch self {
         case .icon:
             return "Icon"
+        case .hotel:
+            return "Hotel"
+        case .needHelp:
+            return "Need_Help"
+        case .travel:
+            return "Travel"
         }
         
     }
