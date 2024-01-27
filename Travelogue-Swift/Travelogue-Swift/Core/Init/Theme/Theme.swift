@@ -18,9 +18,9 @@ extension Theme {
     static var defaultTheme: Theme {
         return Theme(
             themeColor: ThemeColor(
-                appBackgroundColor: .appBackground,
-                onboardBackgroundColor: .onboardBackground,
-                onboardLabelColor: .onboardLabel,
+                primaryBackgroundColor: .primaryBackground,
+                secondaryBackgroundColor: .secondaryBackground,
+                primaryLabelColor: .primaryLabel,
                 onboardSelectedCircleColor: .onboardSelectedCircle,
                 onboardUnselectedCircleColor: .onboardUnselectedCircle
             ),

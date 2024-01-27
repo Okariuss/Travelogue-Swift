@@ -1,0 +1,14 @@
+// App
+"appName" = "Travelogue";
+
+// Splash
+"splashText" = "Seç ve Yolculuğa Çık";
+
+// Onboard
+"onboardSkip" = "ATLA";
+"onboardFirstHeader" = "Yolculuk Yapmak mı İstiyorsun?";
+"onboardFirstSubtitle" = "Nereye gitmek istediğine karar ver, biletini bul ve yolculuğa çık.";
+"onboardSecondHeader" = "Otele mi İhtiyacın Var?";
+"onboardSecondSubtitle" = "Gideceğin yerdeki tüm otelleri fiyat, yıldız ve konforlarına göre sıralayabilir ve en güzel oteli seçebilirsin.";
+"onboardThirdHeader" = "Yardıma mı İhtiyacın Var?";
+"onboardThirdSubtitle" = "Bize mail, telefon ya da canlı destek ile ulaşabilirsin. Her konuda sana yardımcı olacağız.";

@@ -28,9 +28,9 @@ class OnboardViewModel: OnboardViewModelType {
         
     init() {
         self.onboardingItems = [
-            OnboardModel(image: ImageEnums.travel, header: "Want Travel?", subtitle: "Decide where do you want to go, find your ticket and travel."),
-            OnboardModel(image: ImageEnums.hotel, header: "Need Hotel?", subtitle: "You can sort all the hotels in your destination according to price, star and comfort and you can choose the most beautiful hotel."),
-            OnboardModel(image: ImageEnums.needHelp, header: "Need Help?", subtitle: "You can contact us by mail, phone number or live chat. We will assist you in everything.")
+            OnboardModel(image: ImageEnums.travel, header: StringEnums.onboardFirstHeader.rawValue, subtitle: StringEnums.onboardFirstSubtitle.rawValue),
+            OnboardModel(image: ImageEnums.hotel, header: StringEnums.onboardSecondHeader.rawValue, subtitle: StringEnums.onboardSecondSubtitle.rawValue),
+            OnboardModel(image: ImageEnums.needHelp, header: StringEnums.onboardThirdHeader.rawValue, subtitle: StringEnums.onboardThirdSubtitle.rawValue)
             
         ]
     }

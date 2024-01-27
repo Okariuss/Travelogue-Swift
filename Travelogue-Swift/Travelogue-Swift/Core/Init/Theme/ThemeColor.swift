@@ -10,9 +10,9 @@ import UIKit
 
 
 struct ThemeColor {
-    let appBackgroundColor: UIColor
-    let onboardBackgroundColor: UIColor
-    let onboardLabelColor: UIColor
+    let primaryBackgroundColor: UIColor
+    let secondaryBackgroundColor: UIColor
+    let primaryLabelColor: UIColor
     let onboardSelectedCircleColor: UIColor
     let onboardUnselectedCircleColor: UIColor
 }
