@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB08354D2B65067800D891C0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08354C2B65067800D891C0 /* String+Extension.swift */; };
+		EB0835512B65081500D891C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB0835532B65081500D891C0 /* Localizable.strings */; };
 		EB20B8FF2B516C3300848184 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B8FE2B516C3300848184 /* AppDelegate.swift */; };
 		EB20B9012B516C3300848184 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B9002B516C3300848184 /* SceneDelegate.swift */; };
 		EB20B9182B51743D00848184 /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B9172B51743D00848184 /* MainTabbarViewController.swift */; };
@@ -37,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB08354C2B65067800D891C0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		EB0835522B65081500D891C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB0835542B65081700D891C0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EB20B8FB2B516C3300848184 /* Travelogue-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travelogue-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB20B8FE2B516C3300848184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB20B9002B516C3300848184 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB08354E2B6507E000D891C0 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				EB0835532B65081500D891C0 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		EB20B8F22B516C3300848184 = {
 			isa = PBXGroup;
 			children = (
@@ -129,11 +142,11 @@
 		EB20B9142B516CD300848184 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EB08354E2B6507E000D891C0 /* Localization */,
 				EB53E5FC2B616BF400578E86 /* Enum */,
 				EB53E5F22B612FC500578E86 /* Extensions */,
 				EB53E5EA2B61296E00578E86 /* Init */,
 				EB20B93D2B51D64E00848184 /* Fonts */,
-				EB20B91F2B51786400848184 /* Constants */,
 				EB20B9152B516CDE00848184 /* Supported */,
 			);
 			path = Core;
@@ -172,14 +185,6 @@
 				EB20B91D2B51777800848184 /* FavoriteViewController.swift */,
 			);
 			path = Favorite;
-			sourceTree = "<group>";
-		};
-		EB20B91F2B51786400848184 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				EB20B9202B51787E00848184 /* StringConstants.swift */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		EB20B9222B51798800848184 /* Enums */ = {
@@ -253,6 +258,7 @@
 			children = (
 				EB53E5F32B612FDA00578E86 /* UIFont+Extensions.swift */,
 				EB53E5FA2B6144D300578E86 /* Collection.swift */,
+				EB08354C2B65067800D891C0 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 		EB53E5FC2B616BF400578E86 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				EB20B9202B51787E00848184 /* StringConstants.swift */,
 				EB53E5FD2B616C2800578E86 /* CacheItems.swift */,
 			);
 			path = Enum;
@@ -326,6 +333,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = EB20B8F22B516C3300848184;
 			packageReferences = (
@@ -346,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB20B93F2B51D66D00848184 /* BilboSwashCaps-Regular.ttf in Resources */,
+				EB0835512B65081500D891C0 /* Localizable.strings in Resources */,
 				EB20B9412B51DF0600848184 /* Aldrich-Regular.ttf in Resources */,
 				EB20B9382B51C78400848184 /* Assets.xcassets in Resources */,
 			);
@@ -374,6 +383,7 @@
 				EB53E5E32B61206E00578E86 /* OnboardViewController.swift in Sources */,
 				EB53E5FB2B6144D300578E86 /* Collection.swift in Sources */,
 				EB53E5F12B612A3500578E86 /* ThemeFont.swift in Sources */,
+				EB08354D2B65067800D891C0 /* String+Extension.swift in Sources */,
 				EB20B9012B516C3300848184 /* SceneDelegate.swift in Sources */,
 				EB53E5F92B613A1400578E86 /* OnboardViewModel.swift in Sources */,
 				EB20B91C2B51776700848184 /* HomeViewController.swift in Sources */,
@@ -385,6 +395,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EB0835532B65081500D891C0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB0835522B65081500D891C0 /* en */,
+				EB0835542B65081700D891C0 /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EB20B90D2B516C3400848184 /* Debug */ = {

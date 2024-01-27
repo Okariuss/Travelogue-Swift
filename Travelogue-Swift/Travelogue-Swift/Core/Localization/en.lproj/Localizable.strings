@@ -1,0 +1,15 @@
+// App
+"appName" = "Travelogue";
+
+// Splash
+"splashText" = "Choose and Travel";
+
+// Onboard
+"onboardSkip" = "SKIP";
+"onboardFirstHeader" = "Want Travel?";
+"onboardFirstSubtitle" = "Decide where do you want to go, find your ticket and travel.";
+"onboardSecondHeader" = "Need Hotel?";
+"onboardSecondSubtitle" = "You can sort all the hotels in your destination according to price, star and comfort and you can choose the most beautiful hotel.";
+"onboardThirdHeader" = "Need Help?";
+"onboardThirdSubtitle" = "You can contact us by mail, phone number or live chat. We will assist you in everything.";
+

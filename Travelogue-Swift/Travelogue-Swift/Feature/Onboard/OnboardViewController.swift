@@ -31,6 +31,7 @@ class OnboardViewController: UIViewController, OnboardViewModelDelegate {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
+        label.numberOfLines = 0
         label.font = Theme.defaultTheme.themeFont.headlineFont.boldVersion
         return label
     }()
@@ -56,7 +57,7 @@ class OnboardViewController: UIViewController, OnboardViewModelDelegate {
     private lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.forward"), for: .normal)
+        button.setImage(SystemImageEnums.forward.normal, for: .normal)
         button.tintColor = Theme.defaultTheme.themeColor.onboardSelectedCircleColor
         button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         return button
@@ -65,7 +66,7 @@ class OnboardViewController: UIViewController, OnboardViewModelDelegate {
     private lazy var skipButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("SKIP", for: .normal)
+        button.setTitle(StringEnums.onboardSkip.rawValue, for: .normal)
         button.setTitleColor(Theme.defaultTheme.themeColor.onboardSelectedCircleColor, for: .normal)
         button.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
         return button
@@ -82,7 +83,7 @@ class OnboardViewController: UIViewController, OnboardViewModelDelegate {
 extension OnboardViewController {
     
     private func configureUI() {
-        view.backgroundColor = .onboardBackground
+        view.backgroundColor = .secondaryBackground
         
         viewModel = OnboardViewModel()
         viewModel.delegate = self
@@ -145,12 +146,13 @@ extension OnboardViewController {
         ]
         
         let headerLabelConstraints = [
-            viewController.headerLabel.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor),
+            viewController.headerLabel.leadingAnchor.constraint(equalTo: viewController.view.safeAreaLayoutGuide.leadingAnchor),
+            viewController.headerLabel.trailingAnchor.constraint(equalTo: viewController.view.safeAreaLayoutGuide.trailingAnchor),
             viewController.headerLabel.topAnchor.constraint(equalTo: viewController.imageView.bottomAnchor, constant: SpaceEnums.extraLarge.rawValue)
         ]
         
         let subtitleLabelConstraints = [
-            viewController.subtitleLabel.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor),
+            
             viewController.subtitleLabel.leadingAnchor.constraint(equalTo: viewController.view.safeAreaLayoutGuide.leadingAnchor, constant: SpaceEnums.normal.rawValue),
             viewController.subtitleLabel.trailingAnchor.constraint(equalTo: viewController.view.safeAreaLayoutGuide.trailingAnchor, constant: -SpaceEnums.normal.rawValue),
             viewController.subtitleLabel.topAnchor.constraint(equalTo: viewController.headerLabel.bottomAnchor, constant: SpaceEnums.small.rawValue)
