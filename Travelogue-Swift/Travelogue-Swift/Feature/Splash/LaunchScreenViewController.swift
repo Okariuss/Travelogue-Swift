@@ -23,16 +23,16 @@ class LaunchScreenViewController: UIViewController {
     private let travelogueSplashTextView: UILabel = {
         let text = UILabel()
         text.translatesAutoresizingMaskIntoConstraints = false
-        text.text = StringEnums.appName.rawValue
-        text.font = UIFont(name: StringEnums.bilbo.rawValue, size: TextSizeEnums.headline.rawValue)?.boldVersion
+        text.text = StringEnums.appName.toLocalized
+        text.font = UIFont(name: FontConstants.bilbo.rawValue, size: TextSizeEnums.headline.rawValue)?.boldVersion
         return text
     }()
     
     private let splashTextView: UILabel = {
         let text = UILabel()
         text.translatesAutoresizingMaskIntoConstraints = false
-        text.text = StringEnums.splashText.rawValue
-        text.font = UIFont(name: StringEnums.aldrich.rawValue, size: TextSizeEnums.caption.rawValue)
+        text.text = StringEnums.splashText.toLocalized
+        text.font = UIFont(name: FontConstants.aldrich.rawValue, size: TextSizeEnums.caption.rawValue)
         return text
     }()
     

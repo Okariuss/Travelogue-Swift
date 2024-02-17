@@ -9,8 +9,7 @@ import Foundation
 
 enum StringEnums {
     case appName
-    case aldrich
-    case bilbo
+    
     case splashText
     case onboardSkip
     case onboardFirstHeader
@@ -23,27 +22,27 @@ enum StringEnums {
     var rawValue: String {
         switch self {
         case .appName:
-            return "appName".localized()
-        case .aldrich:
-            return "Aldrich-Regular"
-        case .bilbo:
-            return "BilboSwashCaps-Regular"
+            return "appName"
         case .splashText:
-            return "splashText".localized()
+            return "splashText"
         case .onboardSkip:
-            return "onboardSkip".localized()
+            return "onboardSkip"
         case .onboardFirstHeader:
-            return "onboardFirstHeader".localized()
+            return "onboardFirstHeader"
         case .onboardFirstSubtitle:
-            return "onboardFirstSubtitle".localized()
+            return "onboardFirstSubtitle"
         case .onboardSecondHeader:
-            return "onboardSecondHeader".localized()
+            return "onboardSecondHeader"
         case .onboardSecondSubtitle:
-            return "onboardSecondSubtitle".localized()
+            return "onboardSecondSubtitle"
         case .onboardThirdHeader:
-            return "onboardThirdHeader".localized()
+            return "onboardThirdHeader"
         case .onboardThirdSubtitle:
-            return "onboardThirdSubtitle".localized()
+            return "onboardThirdSubtitle"
         }
+    }
+    
+    var toLocalized: String {
+        return rawValue.localized()
     }
 }

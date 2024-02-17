@@ -28,9 +28,9 @@ class OnboardViewModel: OnboardViewModelType {
         
     init() {
         self.onboardingItems = [
-            OnboardModel(image: ImageEnums.travel, header: StringEnums.onboardFirstHeader.rawValue, subtitle: StringEnums.onboardFirstSubtitle.rawValue),
-            OnboardModel(image: ImageEnums.hotel, header: StringEnums.onboardSecondHeader.rawValue, subtitle: StringEnums.onboardSecondSubtitle.rawValue),
-            OnboardModel(image: ImageEnums.needHelp, header: StringEnums.onboardThirdHeader.rawValue, subtitle: StringEnums.onboardThirdSubtitle.rawValue)
+            OnboardModel(image: ImageEnums.travel, header: StringEnums.onboardFirstHeader.toLocalized, subtitle: StringEnums.onboardFirstSubtitle.toLocalized),
+            OnboardModel(image: ImageEnums.hotel, header: StringEnums.onboardSecondHeader.toLocalized, subtitle: StringEnums.onboardSecondSubtitle.toLocalized),
+            OnboardModel(image: ImageEnums.needHelp, header: StringEnums.onboardThirdHeader.toLocalized, subtitle: StringEnums.onboardThirdSubtitle.toLocalized)
             
         ]
     }
