@@ -36,6 +36,7 @@
 		EB53E5FB2B6144D300578E86 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53E5FA2B6144D300578E86 /* Collection.swift */; };
 		EB53E5FE2B616C2800578E86 /* CacheItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53E5FD2B616C2800578E86 /* CacheItems.swift */; };
 		EB53E6022B6173FD00578E86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53E6012B6173FD00578E86 /* LoginViewController.swift */; };
+		EB91B4442B80BDEB00841C16 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91B4432B80BDEB00841C16 /* FontConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		EB53E5FA2B6144D300578E86 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		EB53E5FD2B616C2800578E86 /* CacheItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheItems.swift; sourceTree = "<group>"; };
 		EB53E6012B6173FD00578E86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EB91B4432B80BDEB00841C16 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 			children = (
 				EB20B9202B51787E00848184 /* StringConstants.swift */,
 				EB53E5FD2B616C2800578E86 /* CacheItems.swift */,
+				EB91B4432B80BDEB00841C16 /* FontConstants.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				EB53E6022B6173FD00578E86 /* LoginViewController.swift in Sources */,
 				EB20B9432B51E25F00848184 /* SpaceEnums.swift in Sources */,
 				EB20B8FF2B516C3300848184 /* AppDelegate.swift in Sources */,
+				EB91B4442B80BDEB00841C16 /* FontConstants.swift in Sources */,
 				EB20B93A2B51CBD400848184 /* ImageEnums.swift in Sources */,
 				EB20B92F2B51A0BB00848184 /* LaunchScreenViewController.swift in Sources */,
 				EB20B9342B51B22400848184 /* AnimationEnums.swift in Sources */,

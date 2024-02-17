@@ -66,7 +66,7 @@ class OnboardViewController: UIViewController, OnboardViewModelDelegate {
     private lazy var skipButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle(StringEnums.onboardSkip.rawValue, for: .normal)
+        button.setTitle(StringEnums.onboardSkip.toLocalized, for: .normal)
         button.setTitleColor(Theme.defaultTheme.themeColor.onboardSelectedCircleColor, for: .normal)
         button.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
         return button
