@@ -15,18 +15,14 @@ final class HomeViewController: UIViewController {
     }
     
     private func setupBackground() {
-        // Create a UIImageView with the background image
         let backgroundImage = AppConstants.Images.background.toImage
         let backgroundImageView = UIImageView(image: backgroundImage)
         backgroundImageView.contentMode = .scaleAspectFill
-        backgroundImageView.clipsToBounds = true // Ensure the image doesn't overflow
+        backgroundImageView.clipsToBounds = true
         
-        // Add the background image view to the view controller's main view
         view.addSubviews(backgroundImageView)
         
-        // Send the background image view to the back so other views are on top
         view.sendSubviewToBack(backgroundImageView)
-        
         
         NSLayoutConstraint.activate([
             backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),

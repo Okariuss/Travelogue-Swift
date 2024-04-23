@@ -58,7 +58,7 @@ final class LaunchScreenViewController: UIViewController {
         constraints += [
             animationView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             animationView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            animationView.heightAnchor.constraint(equalToConstant: AppConstants.ImageSize.extraLarge)
+            animationView.heightAnchor.constraint(equalToConstant: AppConstants.ImageSize.extraLarge.rawValue)
         ]
         
         NSLayoutConstraint.activate(constraints)
@@ -75,7 +75,7 @@ final class LaunchScreenViewController: UIViewController {
     
     private func createLabel(text: String, isTitle: Bool = false) -> UILabel {
         let label = UILabel()
-        label.font = UIFont(name: AppConstants.FontName.title, size: isTitle ? AppConstants.FontSize.extraLargeTitle : AppConstants.FontSize.largeTitle)
+        label.font = isTitle ? Theme.customTheme.themeFont.extraLargeFont : Theme.defaultTheme.themeFont.bodyFont
         label.text = text
         label.textAlignment = .center
         label.textColor = .black
@@ -85,24 +85,27 @@ final class LaunchScreenViewController: UIViewController {
     private func addConstraintsForLabelsAndImage(_ topAnimationView: UIView, _ titleLabel: UILabel, _ subtitleLabel: UILabel, _ imageView: UIImageView) {
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnimationView.bottomAnchor, constant: AppConstants.Spacing.medium),
+            imageView.topAnchor.constraint(equalTo: topAnimationView.bottomAnchor, constant: AppConstants.Spacing.medium.rawValue),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.widthAnchor.constraint(equalToConstant: AppConstants.ImageSize.xxLarge),
-            imageView.heightAnchor.constraint(equalToConstant: AppConstants.ImageSize.xxLarge),
+            imageView.widthAnchor.constraint(equalToConstant: AppConstants.ImageSize.xxLarge.rawValue),
+            imageView.heightAnchor.constraint(equalToConstant: AppConstants.ImageSize.xxLarge.rawValue),
             
-            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: AppConstants.Spacing.medium),
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: AppConstants.Spacing.medium.rawValue),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: AppConstants.Spacing.medium),
+            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: AppConstants.Spacing.medium.rawValue),
             subtitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
     
     private func transitionToMainViewController() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            let mainViewController = TabBarViewController()
-            mainViewController.modalPresentationStyle = .fullScreen
-            self.present(mainViewController, animated: true, completion: nil)
+            let manager = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isFirst.rawValue)
+            
+            let viewController = (manager.value ?? true) ? OnboardViewController() : TabBarViewController()
+            viewController.modalPresentationStyle = .fullScreen
+            viewController.modalTransitionStyle = .partialCurl
+            self.present(viewController, animated: true)
         }
     }
 }

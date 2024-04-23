@@ -11,7 +11,14 @@ import UIKit
 final class AppConstants {
     
     enum FontName {
-        static let title = "BilboSwashCaps-Regular"
+        case bilboSwash
+        
+        var rawValue: String {
+            switch self {
+            case .bilboSwash:
+                "BilboSwashCaps-Regular"
+            }
+        }
     }
     
     enum AnimationName {
@@ -30,11 +37,17 @@ final class AppConstants {
     
     enum SystemImages {
         case house
+        case next
+        case back
         
         var rawValue: String {
             switch self {
             case .house:
                 return "house"
+            case .next:
+                return "chevron.right"
+            case .back:
+                return "chevron.left"
             }
             
         }
@@ -44,13 +57,16 @@ final class AppConstants {
         }
         
         var normal: UIImage {
-            return (UIImage(systemName: rawValue)?.withRenderingMode(.alwaysOriginal).withTintColor(.white))!
+            return (UIImage(systemName: rawValue))!
         }
     }
     
     enum Images {
         case appImage
         case background
+        case onboard1
+        case onboard2
+        case onboard3
         
         var rawValue: String {
             switch self {
@@ -58,6 +74,12 @@ final class AppConstants {
                 "app_image"
             case .background:
                 "background"
+            case .onboard1:
+                "onboard1"
+            case .onboard2:
+                "onboard2"
+            case .onboard3:
+                "onboard3"
             }
         }
         
@@ -68,32 +90,96 @@ final class AppConstants {
     
     enum FontSize {
         // Title font sizes
-        static let extraLargeTitle: CGFloat = 48
-        static let largeTitle: CGFloat = 28
-        static let title: CGFloat = 22
-        static let mediumTitle: CGFloat = 20
+        case extraLargeTitle
+        case largeTitle
+        case title
+        case mediumTitle
         
         // Body font sizes
-        static let body: CGFloat = 17
-        static let caption: CGFloat = 15
+        case body
+        case caption
         
         // Small font sizes
-        static let small: CGFloat = 13
-        static let extraSmall: CGFloat = 11
+        case small
+        case extraSmall
+        
+        var rawValue: CGFloat {
+            switch self {
+            case .extraLargeTitle:
+                return 48
+            case .largeTitle:
+                return 28
+            case .title:
+                return 22
+            case .mediumTitle:
+                return 20
+            case .body:
+                return 17
+            case .caption:
+                return 15
+            case .small:
+                return 13
+            case .extraSmall:
+                return 11
+            }
+        }
+        
+        var toFont: UIFont {
+            return .systemFont(ofSize: rawValue)
+        }
     }
     
     enum Spacing {
-        static let small: CGFloat = 8
-        static let medium: CGFloat = 16
-        static let large: CGFloat = 24
-        static let extraLarge: CGFloat = 32
+        case small
+        case medium
+        case large
+        case extraLarge
+        
+        var rawValue: CGFloat {
+            switch self {
+            case .small:
+                return 8
+            case .medium:
+                return 16
+            case .large:
+                return 24
+            case .extraLarge:
+                return 32
+            }
+        }
     }
     
     enum ImageSize {
-        static let small: CGFloat = 24
-        static let medium: CGFloat = 48
-        static let large: CGFloat = 96
-        static let extraLarge: CGFloat = 128
-        static let xxLarge: CGFloat = 256
+        case small
+        case medium
+        case large
+        case extraLarge
+        case xxLarge
+        
+        var rawValue: CGFloat {
+            switch self {
+            case .small:
+                return 24
+            case .medium:
+                return 48
+            case .large:
+                return 96
+            case .extraLarge:
+                return 128
+            case .xxLarge:
+                return 256
+            }
+        }
+    }
+    
+    enum UserDefaultsEnums {
+        case isFirst
+        
+        var rawValue: String {
+            switch self {
+            case .isFirst:
+                "isFirst"
+            }
+        }
     }
 }

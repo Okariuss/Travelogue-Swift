@@ -7,3 +7,11 @@
 */
 
 "launch.subtitle" = "Seç ve Seyahat Et";
+
+"onboard.skip" = "ATLA";
+"onboard.firstHeader" = "Seyahat Etmek İster Misiniz?";
+"onboard.firstSubtitle" = "Nereye gitmek istediğinize karar verin, biletinizi bulun ve seyahat edin.";
+"onboard.secondHeader" = "Otel mi Lazım?";
+"onboard.secondSubtitle" = "Gideceğiniz yerdeki tüm otelleri fiyata, yıldıza ve konfora göre sıralayabilir ve en güzel oteli seçebilirsiniz.";
+"onboard.thirdHeader" = "Yardıma mı İhtiyacınız Var?";
+"onboard.thirdSubtitle" = "Bize e-posta, telefon numarası veya canlı sohbet ile ulaşabilirsiniz. Her konuda size yardımcı olacağız.";
