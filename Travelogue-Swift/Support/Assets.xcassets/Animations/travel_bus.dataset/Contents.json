@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "travel_bus.json",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,805 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB17CB5F2BD66E3E00FAABF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CB5E2BD66E3E00FAABF8 /* AppDelegate.swift */; };
+		EB17CB612BD66E3E00FAABF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CB602BD66E3E00FAABF8 /* SceneDelegate.swift */; };
+		EB17CB692BD66E3E00FAABF8 /* Travelogue_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB17CB672BD66E3E00FAABF8 /* Travelogue_Swift.xcdatamodeld */; };
+		EB17CB6B2BD66E4000FAABF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB17CB6A2BD66E4000FAABF8 /* Assets.xcassets */; };
+		EB17CB6E2BD66E4000FAABF8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EB17CB6D2BD66E4000FAABF8 /* Base */; };
+		EB17CB792BD66E4000FAABF8 /* Travelogue_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CB782BD66E4000FAABF8 /* Travelogue_SwiftTests.swift */; };
+		EB17CB832BD66E4000FAABF8 /* Travelogue_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CB822BD66E4000FAABF8 /* Travelogue_SwiftUITests.swift */; };
+		EB17CB852BD66E4000FAABF8 /* Travelogue_SwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CB842BD66E4000FAABF8 /* Travelogue_SwiftUITestsLaunchTests.swift */; };
+		EB17CB9A2BD67EF800FAABF8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EB17CB992BD67EF800FAABF8 /* Lottie */; };
+		EB17CB9C2BD6972300FAABF8 /* BilboSwashCaps-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB17CB9B2BD6972300FAABF8 /* BilboSwashCaps-Regular.ttf */; };
+		EB17CB9E2BD69A8E00FAABF8 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CB9D2BD69A8E00FAABF8 /* LaunchScreenViewController.swift */; };
+		EB17CBA12BD69BB200FAABF8 /* Weakifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBA02BD69BB200FAABF8 /* Weakifiable.swift */; };
+		EB17CBA42BD69BF700FAABF8 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBA32BD69BF700FAABF8 /* UIView+Ext.swift */; };
+		EB17CBA62BD69CB000FAABF8 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBA52BD69CB000FAABF8 /* CGFloat+Ext.swift */; };
+		EB17CBA92BD69D3B00FAABF8 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBA82BD69D3B00FAABF8 /* AppConstants.swift */; };
+		EB17CBAC2BD6A34B00FAABF8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBAB2BD6A34B00FAABF8 /* TabBarViewController.swift */; };
+		EB17CBAF2BD6A38E00FAABF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBAE2BD6A38E00FAABF8 /* HomeViewController.swift */; };
+		EB17CBBA2BD7DECB00FAABF8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB17CBB92BD7DECB00FAABF8 /* Localizable.strings */; };
+		EB17CBBF2BD7E04B00FAABF8 /* L10N.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBBE2BD7E04B00FAABF8 /* L10N.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB17CB752BD66E4000FAABF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB17CB532BD66E3E00FAABF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB17CB5A2BD66E3E00FAABF8;
+			remoteInfo = "Travelogue-Swift";
+		};
+		EB17CB7F2BD66E4000FAABF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB17CB532BD66E3E00FAABF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB17CB5A2BD66E3E00FAABF8;
+			remoteInfo = "Travelogue-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB17CB5B2BD66E3E00FAABF8 /* Travelogue-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travelogue-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB17CB5E2BD66E3E00FAABF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB17CB602BD66E3E00FAABF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EB17CB682BD66E3E00FAABF8 /* Travelogue_Swift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Travelogue_Swift.xcdatamodel; sourceTree = "<group>"; };
+		EB17CB6A2BD66E4000FAABF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB17CB6D2BD66E4000FAABF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB17CB6F2BD66E4000FAABF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB17CB742BD66E4000FAABF8 /* Travelogue-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travelogue-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB17CB782BD66E4000FAABF8 /* Travelogue_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travelogue_SwiftTests.swift; sourceTree = "<group>"; };
+		EB17CB7E2BD66E4000FAABF8 /* Travelogue-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travelogue-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB17CB822BD66E4000FAABF8 /* Travelogue_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travelogue_SwiftUITests.swift; sourceTree = "<group>"; };
+		EB17CB842BD66E4000FAABF8 /* Travelogue_SwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travelogue_SwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EB17CB9B2BD6972300FAABF8 /* BilboSwashCaps-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BilboSwashCaps-Regular.ttf"; sourceTree = "<group>"; };
+		EB17CB9D2BD69A8E00FAABF8 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		EB17CBA02BD69BB200FAABF8 /* Weakifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weakifiable.swift; sourceTree = "<group>"; };
+		EB17CBA32BD69BF700FAABF8 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		EB17CBA52BD69CB000FAABF8 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		EB17CBA82BD69D3B00FAABF8 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		EB17CBAB2BD6A34B00FAABF8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		EB17CBAE2BD6A38E00FAABF8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EB17CBB82BD7DECB00FAABF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB17CBBD2BD7E02900FAABF8 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB17CBBE2BD7E04B00FAABF8 /* L10N.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10N.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB17CB582BD66E3E00FAABF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB17CB9A2BD67EF800FAABF8 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB17CB712BD66E4000FAABF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB17CB7B2BD66E4000FAABF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB17CB522BD66E3E00FAABF8 = {
+			isa = PBXGroup;
+			children = (
+				EB17CB5D2BD66E3E00FAABF8 /* Travelogue-Swift */,
+				EB17CB772BD66E4000FAABF8 /* Travelogue-SwiftTests */,
+				EB17CB812BD66E4000FAABF8 /* Travelogue-SwiftUITests */,
+				EB17CB5C2BD66E3E00FAABF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB17CB5C2BD66E3E00FAABF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CB5B2BD66E3E00FAABF8 /* Travelogue-Swift.app */,
+				EB17CB742BD66E4000FAABF8 /* Travelogue-SwiftTests.xctest */,
+				EB17CB7E2BD66E4000FAABF8 /* Travelogue-SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB17CB5D2BD66E3E00FAABF8 /* Travelogue-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CB942BD67BEC00FAABF8 /* Controllers */,
+				EB17CB922BD670EF00FAABF8 /* Utilities */,
+				EB17CB912BD66E8800FAABF8 /* Support */,
+			);
+			path = "Travelogue-Swift";
+			sourceTree = "<group>";
+		};
+		EB17CB772BD66E4000FAABF8 /* Travelogue-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CB782BD66E4000FAABF8 /* Travelogue_SwiftTests.swift */,
+			);
+			path = "Travelogue-SwiftTests";
+			sourceTree = "<group>";
+		};
+		EB17CB812BD66E4000FAABF8 /* Travelogue-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CB822BD66E4000FAABF8 /* Travelogue_SwiftUITests.swift */,
+				EB17CB842BD66E4000FAABF8 /* Travelogue_SwiftUITestsLaunchTests.swift */,
+			);
+			path = "Travelogue-SwiftUITests";
+			sourceTree = "<group>";
+		};
+		EB17CB912BD66E8800FAABF8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CB6F2BD66E4000FAABF8 /* Info.plist */,
+				EB17CB602BD66E3E00FAABF8 /* SceneDelegate.swift */,
+				EB17CB5E2BD66E3E00FAABF8 /* AppDelegate.swift */,
+				EB17CB6A2BD66E4000FAABF8 /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		EB17CB922BD670EF00FAABF8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CBB22BD7CEA000FAABF8 /* Localization */,
+				EB17CBB12BD7B3F700FAABF8 /* Fonts */,
+				EB17CBA72BD69D3000FAABF8 /* Constants */,
+				EB17CBA22BD69BE200FAABF8 /* Extensions */,
+				EB17CB9F2BD69BA900FAABF8 /* Base */,
+				EB17CB932BD670F900FAABF8 /* CoreData */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EB17CB932BD670F900FAABF8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CB672BD66E3E00FAABF8 /* Travelogue_Swift.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EB17CB942BD67BEC00FAABF8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CBB02BD7B3CF00FAABF8 /* Others */,
+				EB17CBAA2BD6A32900FAABF8 /* Core */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EB17CB952BD67BF900FAABF8 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CB6C2BD66E4000FAABF8 /* LaunchScreen.storyboard */,
+				EB17CB9D2BD69A8E00FAABF8 /* LaunchScreenViewController.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		EB17CB9F2BD69BA900FAABF8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CBA02BD69BB200FAABF8 /* Weakifiable.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EB17CBA22BD69BE200FAABF8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CBA32BD69BF700FAABF8 /* UIView+Ext.swift */,
+				EB17CBA52BD69CB000FAABF8 /* CGFloat+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EB17CBA72BD69D3000FAABF8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CBA82BD69D3B00FAABF8 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EB17CBAA2BD6A32900FAABF8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CBAD2BD6A37C00FAABF8 /* Home */,
+				EB17CBAB2BD6A34B00FAABF8 /* TabBarViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EB17CBAD2BD6A37C00FAABF8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CBAE2BD6A38E00FAABF8 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EB17CBB02BD7B3CF00FAABF8 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CB952BD67BF900FAABF8 /* Launch */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		EB17CBB12BD7B3F700FAABF8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CB9B2BD6972300FAABF8 /* BilboSwashCaps-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EB17CBB22BD7CEA000FAABF8 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CBB92BD7DECB00FAABF8 /* Localizable.strings */,
+				EB17CBBE2BD7E04B00FAABF8 /* L10N.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB17CB5A2BD66E3E00FAABF8 /* Travelogue-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB17CB882BD66E4000FAABF8 /* Build configuration list for PBXNativeTarget "Travelogue-Swift" */;
+			buildPhases = (
+				EB17CB572BD66E3E00FAABF8 /* Sources */,
+				EB17CB582BD66E3E00FAABF8 /* Frameworks */,
+				EB17CB592BD66E3E00FAABF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Travelogue-Swift";
+			packageProductDependencies = (
+				EB17CB992BD67EF800FAABF8 /* Lottie */,
+			);
+			productName = "Travelogue-Swift";
+			productReference = EB17CB5B2BD66E3E00FAABF8 /* Travelogue-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB17CB732BD66E4000FAABF8 /* Travelogue-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB17CB8B2BD66E4000FAABF8 /* Build configuration list for PBXNativeTarget "Travelogue-SwiftTests" */;
+			buildPhases = (
+				EB17CB702BD66E4000FAABF8 /* Sources */,
+				EB17CB712BD66E4000FAABF8 /* Frameworks */,
+				EB17CB722BD66E4000FAABF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB17CB762BD66E4000FAABF8 /* PBXTargetDependency */,
+			);
+			name = "Travelogue-SwiftTests";
+			productName = "Travelogue-SwiftTests";
+			productReference = EB17CB742BD66E4000FAABF8 /* Travelogue-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EB17CB7D2BD66E4000FAABF8 /* Travelogue-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB17CB8E2BD66E4000FAABF8 /* Build configuration list for PBXNativeTarget "Travelogue-SwiftUITests" */;
+			buildPhases = (
+				EB17CB7A2BD66E4000FAABF8 /* Sources */,
+				EB17CB7B2BD66E4000FAABF8 /* Frameworks */,
+				EB17CB7C2BD66E4000FAABF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB17CB802BD66E4000FAABF8 /* PBXTargetDependency */,
+			);
+			name = "Travelogue-SwiftUITests";
+			productName = "Travelogue-SwiftUITests";
+			productReference = EB17CB7E2BD66E4000FAABF8 /* Travelogue-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB17CB532BD66E3E00FAABF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					EB17CB5A2BD66E3E00FAABF8 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					EB17CB732BD66E4000FAABF8 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = EB17CB5A2BD66E3E00FAABF8;
+					};
+					EB17CB7D2BD66E4000FAABF8 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = EB17CB5A2BD66E3E00FAABF8;
+					};
+				};
+			};
+			buildConfigurationList = EB17CB562BD66E3E00FAABF8 /* Build configuration list for PBXProject "Travelogue-Swift" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				tr,
+			);
+			mainGroup = EB17CB522BD66E3E00FAABF8;
+			packageReferences = (
+				EB17CB982BD67EF800FAABF8 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			productRefGroup = EB17CB5C2BD66E3E00FAABF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB17CB5A2BD66E3E00FAABF8 /* Travelogue-Swift */,
+				EB17CB732BD66E4000FAABF8 /* Travelogue-SwiftTests */,
+				EB17CB7D2BD66E4000FAABF8 /* Travelogue-SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB17CB592BD66E3E00FAABF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB17CB6B2BD66E4000FAABF8 /* Assets.xcassets in Resources */,
+				EB17CBBA2BD7DECB00FAABF8 /* Localizable.strings in Resources */,
+				EB17CB9C2BD6972300FAABF8 /* BilboSwashCaps-Regular.ttf in Resources */,
+				EB17CB6E2BD66E4000FAABF8 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB17CB722BD66E4000FAABF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB17CB7C2BD66E4000FAABF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB17CB572BD66E3E00FAABF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB17CBA62BD69CB000FAABF8 /* CGFloat+Ext.swift in Sources */,
+				EB17CBA92BD69D3B00FAABF8 /* AppConstants.swift in Sources */,
+				EB17CBA12BD69BB200FAABF8 /* Weakifiable.swift in Sources */,
+				EB17CB5F2BD66E3E00FAABF8 /* AppDelegate.swift in Sources */,
+				EB17CB612BD66E3E00FAABF8 /* SceneDelegate.swift in Sources */,
+				EB17CBAF2BD6A38E00FAABF8 /* HomeViewController.swift in Sources */,
+				EB17CBA42BD69BF700FAABF8 /* UIView+Ext.swift in Sources */,
+				EB17CB9E2BD69A8E00FAABF8 /* LaunchScreenViewController.swift in Sources */,
+				EB17CBAC2BD6A34B00FAABF8 /* TabBarViewController.swift in Sources */,
+				EB17CB692BD66E3E00FAABF8 /* Travelogue_Swift.xcdatamodeld in Sources */,
+				EB17CBBF2BD7E04B00FAABF8 /* L10N.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB17CB702BD66E4000FAABF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB17CB792BD66E4000FAABF8 /* Travelogue_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB17CB7A2BD66E4000FAABF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB17CB852BD66E4000FAABF8 /* Travelogue_SwiftUITestsLaunchTests.swift in Sources */,
+				EB17CB832BD66E4000FAABF8 /* Travelogue_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB17CB762BD66E4000FAABF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB17CB5A2BD66E3E00FAABF8 /* Travelogue-Swift */;
+			targetProxy = EB17CB752BD66E4000FAABF8 /* PBXContainerItemProxy */;
+		};
+		EB17CB802BD66E4000FAABF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB17CB5A2BD66E3E00FAABF8 /* Travelogue-Swift */;
+			targetProxy = EB17CB7F2BD66E4000FAABF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB17CB6C2BD66E4000FAABF8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB17CB6D2BD66E4000FAABF8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EB17CBB92BD7DECB00FAABF8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB17CBB82BD7DECB00FAABF8 /* en */,
+				EB17CBBD2BD7E02900FAABF8 /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB17CB862BD66E4000FAABF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB17CB872BD66E4000FAABF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB17CB892BD66E4000FAABF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SURBTN8MP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Travelogue-Swift/Support/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.okanorkun.Travelogue-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EB17CB8A2BD66E4000FAABF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SURBTN8MP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Travelogue-Swift/Support/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.okanorkun.Travelogue-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		EB17CB8C2BD66E4000FAABF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SURBTN8MP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.okanorkun.Travelogue-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travelogue-Swift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Travelogue-Swift";
+			};
+			name = Debug;
+		};
+		EB17CB8D2BD66E4000FAABF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SURBTN8MP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.okanorkun.Travelogue-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travelogue-Swift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Travelogue-Swift";
+			};
+			name = Release;
+		};
+		EB17CB8F2BD66E4000FAABF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SURBTN8MP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.okanorkun.Travelogue-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Travelogue-Swift";
+			};
+			name = Debug;
+		};
+		EB17CB902BD66E4000FAABF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SURBTN8MP7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.okanorkun.Travelogue-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Travelogue-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB17CB562BD66E3E00FAABF8 /* Build configuration list for PBXProject "Travelogue-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB17CB862BD66E4000FAABF8 /* Debug */,
+				EB17CB872BD66E4000FAABF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB17CB882BD66E4000FAABF8 /* Build configuration list for PBXNativeTarget "Travelogue-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB17CB892BD66E4000FAABF8 /* Debug */,
+				EB17CB8A2BD66E4000FAABF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB17CB8B2BD66E4000FAABF8 /* Build configuration list for PBXNativeTarget "Travelogue-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB17CB8C2BD66E4000FAABF8 /* Debug */,
+				EB17CB8D2BD66E4000FAABF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB17CB8E2BD66E4000FAABF8 /* Build configuration list for PBXNativeTarget "Travelogue-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB17CB8F2BD66E4000FAABF8 /* Debug */,
+				EB17CB902BD66E4000FAABF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB17CB982BD67EF800FAABF8 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB17CB992BD67EF800FAABF8 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB17CB982BD67EF800FAABF8 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		EB17CB672BD66E3E00FAABF8 /* Travelogue_Swift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EB17CB682BD66E3E00FAABF8 /* Travelogue_Swift.xcdatamodel */,
+			);
+			currentVersion = EB17CB682BD66E3E00FAABF8 /* Travelogue_Swift.xcdatamodel */;
+			path = Travelogue_Swift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EB17CB532BD66E3E00FAABF8 /* Project object */;
+}

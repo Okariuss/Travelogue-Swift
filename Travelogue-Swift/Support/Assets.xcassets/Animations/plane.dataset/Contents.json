@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "plane.json",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
