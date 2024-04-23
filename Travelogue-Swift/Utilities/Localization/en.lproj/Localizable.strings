@@ -7,3 +7,11 @@
 */
 
 "launch.subtitle" = "Choose and Travel";
+
+"onboard.skip" = "SKIP";
+"onboard.firstHeader" = "Want Travel?";
+"onboard.firstSubtitle" = "Decide where do you want to go, find your ticket and travel.";
+"onboard.secondHeader" = "Need Hotel?";
+"onboard.secondSubtitle" = "You can sort all the hotels in your destination according to price, star and comfort and you can choose the most beautiful hotel.";
+"onboard.thirdHeader" = "Need Help?";
+"onboard.thirdSubtitle" = "You can contact us by mail, phone number or live chat. We will assist you in everything.";
