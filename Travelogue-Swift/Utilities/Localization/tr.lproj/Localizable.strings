@@ -15,3 +15,13 @@
 "onboard.secondSubtitle" = "Gideceğiniz yerdeki tüm otelleri fiyata, yıldıza ve konfora göre sıralayabilir ve en güzel oteli seçebilirsiniz.";
 "onboard.thirdHeader" = "Yardıma mı İhtiyacınız Var?";
 "onboard.thirdSubtitle" = "Bize e-posta, telefon numarası veya canlı sohbet ile ulaşabilirsiniz. Her konuda size yardımcı olacağız.";
+
+"login.welcomeBack" = "Hoş Geldiniz";
+"login.signInContinue" = "Devam etmek için giriş yapın";
+"login.email" = "E-posta";
+"login.password" = "Parola";
+"login.forgotPassword" = "Parolamı Unuttum";
+"login.signIn" = "GİRİŞ YAP";
+"login.googleSignIn" = "GOOGLE İLE GİRİŞ YAP";
+"login.dontHaveAccount" = "Hesabınız yok mu? ";
+"login.signUp" = "Kayıt Ol";

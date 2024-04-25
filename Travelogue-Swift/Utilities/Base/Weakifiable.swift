@@ -11,7 +11,7 @@ protocol Weakifiable: AnyObject { }
 
 extension NSObject: Weakifiable { }
 
-private extension Weakifiable {
+extension Weakifiable {
     func weakify<T>(_ code: @escaping (Self, T) -> Void) -> (T) -> Void {
         return { [weak self] (data) in
             guard let self = self else { return }

@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>AlfaSlabOne-Regular.ttf</string>
 		<string>BilboSwashCaps-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>

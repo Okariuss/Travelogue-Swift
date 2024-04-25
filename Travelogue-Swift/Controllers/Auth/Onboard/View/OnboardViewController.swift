@@ -26,7 +26,7 @@ final class OnboardViewController: UIViewController {
         label.numberOfLines = 0
         label.text = L10N.onboardFirstHeader
         label.textColor = .black
-        label.font = Theme.defaultTheme.themeFont.largeTitleFont.boldVersion
+        label.font = Theme.defaultTheme().themeFont.largeTitleFont
         label.textAlignment = .center
         return label
     }()
@@ -36,7 +36,7 @@ final class OnboardViewController: UIViewController {
         label.numberOfLines = 0
         label.text = L10N.onboardFirstSubtitle
         label.textColor = .black
-        label.font = Theme.defaultTheme.themeFont.bodyFont
+        label.font = Theme.defaultTheme().themeFont.bodyFont
         label.textAlignment = .center
         return label
     }()
@@ -74,7 +74,7 @@ final class OnboardViewController: UIViewController {
     }()
     
     private lazy var viewModel = OnboardViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.view = self
@@ -138,9 +138,13 @@ extension OnboardViewController: OnboardViewControllerDelegate {
     }
 
     func navigateScreen() {
-        let viewController = TabBarViewController()
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
-        present(viewController, animated: true)
+        DispatchQueue.main.async {
+            let isLoginManager = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isLogin.rawValue)
+            let viewController = (isLoginManager.value ?? false) ? TabBarViewController() : LoginViewController()
+            viewController.modalPresentationStyle = .fullScreen
+            viewController.modalTransitionStyle = .flipHorizontal
+            self.present(viewController, animated: true)
+        }
+        
     }
 }

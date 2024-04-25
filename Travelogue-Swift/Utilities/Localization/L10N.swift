@@ -20,4 +20,15 @@ final class L10N {
     static let onboardSecondSubtitle = NSLocalizedString("onboard.secondSubtitle", comment: "Onboard Second Subtitle")
     static let onboardThirdHeader = NSLocalizedString("onboard.thirdHeader", comment: "Onboard Third Header")
     static let onboardThirdSubtitle = NSLocalizedString("onboard.thirdSubtitle", comment: "Onboard Third Subtitle")
+    
+    static let loginWelcomeBack = NSLocalizedString("login.welcomeBack", comment: "Welcome Back")
+        static let loginSignInContinue = NSLocalizedString("login.signInContinue", comment: "Sign in to continue")
+        static let loginEmail = NSLocalizedString("login.email", comment: "E-mail")
+        static let loginPassword = NSLocalizedString("login.password", comment: "Password")
+        static let loginForgotPassword = NSLocalizedString("login.forgotPassword", comment: "Forgot Password")
+        static let loginSignIn = NSLocalizedString("login.signIn", comment: "SIGN IN")
+        static let loginGoogleSignIn = NSLocalizedString("login.googleSignIn", comment: "GOOGLE SIGN IN")
+        static let loginDontHaveAccount = NSLocalizedString("login.dontHaveAccount", comment: "Don't you have an account? ")
+        static let loginSignUp = NSLocalizedString("login.signUp", comment: "Sign Up")
+
 }

@@ -11,10 +11,13 @@ import UIKit
 final class AppConstants {
     
     enum FontName {
+        case alfaSlab
         case bilboSwash
         
         var rawValue: String {
             switch self {
+            case .alfaSlab:
+                "AlfaSlabOne-Regular"
             case .bilboSwash:
                 "BilboSwashCaps-Regular"
             }
@@ -39,15 +42,27 @@ final class AppConstants {
         case house
         case next
         case back
+        case mail
+        case key
+        case showPassword
+        case hidePassword
         
         var rawValue: String {
             switch self {
             case .house:
-                return "house"
+                "house"
             case .next:
-                return "chevron.right"
+                "chevron.right"
             case .back:
-                return "chevron.left"
+                "chevron.left"
+            case .mail:
+                "envelope"
+            case .key:
+                "key.horizontal"
+            case .showPassword:
+                "eye"
+            case .hidePassword:
+                "eye.slash"
             }
             
         }
@@ -106,21 +121,21 @@ final class AppConstants {
         var rawValue: CGFloat {
             switch self {
             case .extraLargeTitle:
-                return 48
+                48
             case .largeTitle:
-                return 28
+                28
             case .title:
-                return 22
+                22
             case .mediumTitle:
-                return 20
+                20
             case .body:
-                return 17
+                17
             case .caption:
-                return 15
+                15
             case .small:
-                return 13
+                13
             case .extraSmall:
-                return 11
+                11
             }
         }
         
@@ -138,13 +153,13 @@ final class AppConstants {
         var rawValue: CGFloat {
             switch self {
             case .small:
-                return 8
+                8
             case .medium:
-                return 16
+                16
             case .large:
-                return 24
+                24
             case .extraLarge:
-                return 32
+                32
             }
         }
     }
@@ -154,31 +169,54 @@ final class AppConstants {
         case medium
         case large
         case extraLarge
+        case big
         case xxLarge
         
         var rawValue: CGFloat {
             switch self {
             case .small:
-                return 24
+                24
             case .medium:
-                return 48
+                48
             case .large:
-                return 96
+                96
             case .extraLarge:
-                return 128
+                128
+            case .big:
+                192
             case .xxLarge:
-                return 256
+                256
             }
         }
     }
     
     enum UserDefaultsEnums {
         case isFirst
+        case isLogin
         
         var rawValue: String {
             switch self {
             case .isFirst:
                 "isFirst"
+            case .isLogin:
+                "isLogin"
+            }
+        }
+    }
+    
+    enum TextFieldHeight {
+        case small
+        case medium
+        case large
+        
+        var rawValue: CGFloat {
+            switch self {
+            case .small:
+                40
+            case .medium:
+                60
+            case .large:
+                80
             }
         }
     }

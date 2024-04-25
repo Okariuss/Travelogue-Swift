@@ -16,9 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.backgroundColor = .background
         window?.windowScene = windowScene
-        window?.rootViewController = LaunchScreenViewController()
+        
+        // Set the initial view controller to LaunchScreenViewController
+        let launchScreenViewController = LaunchScreenViewController()
+        window?.rootViewController = launchScreenViewController
         window?.makeKeyAndVisible()
     }
+
     
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

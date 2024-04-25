@@ -16,4 +16,12 @@ extension UIFont {
 
         return UIFont(descriptor: descriptor, size: .zero)
     }
+    
+    var italicVersion: UIFont {
+        guard let descriptor = fontDescriptor.withSymbolicTraits(.traitItalic) else {
+            return self
+        }
+
+        return UIFont(descriptor: descriptor, size: .zero)
+    }
 }
