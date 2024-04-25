@@ -16,6 +16,7 @@ final class LaunchScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
         transitionToMainViewController()
     }
@@ -75,7 +76,7 @@ final class LaunchScreenViewController: UIViewController {
     
     private func createLabel(text: String, isTitle: Bool = false) -> UILabel {
         let label = UILabel()
-        label.font = isTitle ? Theme.customTheme.themeFont.extraLargeFont : Theme.defaultTheme.themeFont.bodyFont
+        label.font = isTitle ? Theme.defaultTheme(AppConstants.FontName.bilboSwash.rawValue).themeFont.extraLargeFont : Theme.defaultTheme().themeFont.bodyFont
         label.text = text
         label.textAlignment = .center
         label.textColor = .black
@@ -100,11 +101,13 @@ final class LaunchScreenViewController: UIViewController {
     
     private func transitionToMainViewController() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            let manager = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isFirst.rawValue)
             
-            let viewController = (manager.value ?? true) ? OnboardViewController() : TabBarViewController()
+            let isFirstManager = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isFirst.rawValue)
+            let isLoginManager = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isLogin.rawValue)
+            
+            let viewController = (isFirstManager.value ?? true) ? OnboardViewController() : ((isLoginManager.value ?? false) ? TabBarViewController() : LoginViewController())
             viewController.modalPresentationStyle = .fullScreen
-            viewController.modalTransitionStyle = .partialCurl
+            viewController.modalTransitionStyle = .flipHorizontal
             self.present(viewController, animated: true)
         }
     }

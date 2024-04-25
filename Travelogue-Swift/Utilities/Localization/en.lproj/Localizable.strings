@@ -15,3 +15,13 @@
 "onboard.secondSubtitle" = "You can sort all the hotels in your destination according to price, star and comfort and you can choose the most beautiful hotel.";
 "onboard.thirdHeader" = "Need Help?";
 "onboard.thirdSubtitle" = "You can contact us by mail, phone number or live chat. We will assist you in everything.";
+
+"login.welcomeBack" = "Welcome Back";
+"login.signInContinue" = "Sign in to continue";
+"login.email" = "E-mail";
+"login.password" = "Password";
+"login.forgotPassword" = "Forgot Password";
+"login.signIn" = "SIGN IN";
+"login.googleSignIn" = "GOOGLE SIGN IN";
+"login.dontHaveAccount" = "Don't you have an account? ";
+"login.signUp" = "Sign Up";
