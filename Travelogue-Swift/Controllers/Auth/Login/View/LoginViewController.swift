@@ -7,67 +7,44 @@
 
 import UIKit
 
-protocol LoginViewControllerDelegate: AnyObject {
-    func configure()
+protocol LoginViewControllerDelegate: BaseViewControllerDelegate {
     func updateUI()
-    func navigateScreen(_ vc: UIViewController)
 }
 
 final class LoginViewController: UIViewController {
-    private let imageView: UIImageView = {
-        let imageView = UIImageView(image: AppConstants.Images.appImage.toImage)
-        imageView.contentMode = .scaleAspectFit
-        return imageView
+    private lazy var imageView: UIImageView = {
+        return addImageView(image: AppConstants.Images.appImage.toImage)
     }()
     
-    private let welcomeTextLabel: UILabel = {
-        let label = UILabel()
-        label.text = L10N.loginWelcomeBack
-        label.textAlignment = .center
-        label.font = Theme.defaultTheme(AppConstants.FontName.alfaSlab.rawValue).themeFont.extraLargeFont
-        label.textColor = .systemGray4
-        return label
+    private lazy var welcomeTextLabel: UILabel = {
+        return addLabel(text: L10N.loginWelcomeBack, font: Theme.defaultTheme(AppConstants.FontName.alfaSlab.rawValue).themeFont.extraLargeFont)
     }()
     
-    private let signInTextLabel: UILabel = {
-        let label = UILabel()
-        label.text = L10N.loginSignInContinue
-        label.textAlignment = .center
-        label.font = Theme.defaultTheme().themeFont.mediumTitleFont.italicVersion
-        label.textColor = .systemGray4
-        return label
+    private lazy var signInTextLabel: UILabel = {
+        return addLabel(text: L10N.loginSignInContinue, font: Theme.defaultTheme().themeFont.mediumTitleFont.italicVersion)
     }()
     
-    private let emailTextField = CustomTextField(type: .email, placeholderText: L10N.loginEmail, image: AppConstants.SystemImages.mail.toSelected)
+    private lazy var emailTextField = CustomTextField(type: .email, placeholderText: L10N.loginEmail, image: AppConstants.SystemImages.mail.toSelected)
     
-    private let passwordTextField = CustomTextField(type: .password(secure: true), placeholderText: L10N.loginPassword, image: AppConstants.SystemImages.key.toSelected)
+    private lazy var passwordTextField = CustomTextField(type: .password(secure: true), placeholderText: L10N.loginPassword, image: AppConstants.SystemImages.key.toSelected)
     
-    private let forgotPasswordLabel: UILabel = {
-        let label = UILabel()
-        label.underlinedText = L10N.loginForgotPassword
-        label.textColor = .systemGray4
-        return label
+    private lazy var forgotPasswordLabel: UILabel = {
+        return addLabel(isUnderlined: true, text: L10N.loginForgotPassword)
     }()
     
-    private let signInButton = CustomButton(gradientColors: [.background, .black], title: L10N.loginSignIn)
+    private lazy var signInButton = CustomButton(gradientColors: [.background, .black], title: L10N.loginSignIn)
     
-    private let googleSignInButton = CustomButton(gradientColors: [.systemBlue, .white], title: L10N.loginGoogleSignIn)
+    private lazy var googleSignInButton = CustomButton(gradientColors: [.systemBlue, .white], title: L10N.loginGoogleSignIn)
     
-    private let dontHaveAccountLabel: UILabel = {
-        let label = UILabel()
-        label.text = L10N.loginDontHaveAccount
-        label.textColor = .systemGray4
-        return label
+    private lazy var dontHaveAccountLabel: UILabel = {
+        return addLabel(isUnderlined: true ,text: L10N.loginDontHaveAccount)
     }()
     
-    private let signUpLabel: UILabel = {
-        let label = UILabel()
-        label.underlinedText = L10N.loginSignUp
-        label.textColor = .systemGray4
-        return label
+    private lazy var signUpLabel: UILabel = {
+        return addLabel(text: L10N.loginSignUp)
     }()
     
-    private lazy var viewModel = LoginViewModel()
+    private lazy var viewModel: LoginViewModel<LoginViewController> = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,15 +7,13 @@
 
 import Foundation
 
-protocol LoginViewModelDelegate {
-    var view: LoginViewControllerDelegate? { get set }
-    func viewDidLoad()
+protocol LoginViewModelDelegate: BaseViewModelDelegate {
     func forgotPassword()
     func signUp()
 }
 
-final class LoginViewModel {
-    weak var view: LoginViewControllerDelegate?
+final class LoginViewModel<T: LoginViewControllerDelegate> {
+    weak var view: T?
 }
 
 extension LoginViewModel: LoginViewModelDelegate {

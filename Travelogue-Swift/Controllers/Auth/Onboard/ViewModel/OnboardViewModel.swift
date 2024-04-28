@@ -7,16 +7,14 @@
 
 import Foundation
 
-protocol OnboardViewModelDelegate {
-    var view: OnboardViewControllerDelegate? { get set }
-    func viewDidLoad()
+protocol OnboardViewModelDelegate: BaseViewModelDelegate {
     func didTapNext()
     func didTapBack()
-    func didSelectPage(at: Int)
+    func didSelectPage(at index: Int)
 }
 
-final class OnboardViewModel {
-    weak var view: OnboardViewControllerDelegate?
+final class OnboardViewModel<T: OnboardViewControllerDelegate> {
+    weak var view: T?
     var selectedIndex = 0
     let onboardElements: [OnboardModel] = [
         OnboardModel(
@@ -38,6 +36,7 @@ final class OnboardViewModel {
 }
 
 extension OnboardViewModel: OnboardViewModelDelegate {
+    
     func viewDidLoad() {
         view?.configure()
     }
@@ -50,7 +49,9 @@ extension OnboardViewModel: OnboardViewModelDelegate {
         } else {
             var isFirst = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isFirst.rawValue)
             isFirst.value = false
-            view?.navigateScreen()
+            let isLoginManager = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isLogin.rawValue)
+            let viewController = (isLoginManager.value ?? false) ? TabBarViewController() : LoginViewController()
+            view?.navigateScreen(viewController)
         }
     }
     
