@@ -33,6 +33,10 @@
 		EB17CBCF2BD80F9B00FAABF8 /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBCE2BD80F9B00FAABF8 /* UIFont+Ext.swift */; };
 		EB17CBD12BD8245A00FAABF8 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBD02BD8245A00FAABF8 /* UserDefaultsManager.swift */; };
 		EB17CBD52BD8677D00FAABF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBD42BD8677D00FAABF8 /* LoginViewController.swift */; };
+		EB3120B12BDE524A0015E787 /* LaunchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3120B02BDE524A0015E787 /* LaunchScreenViewModel.swift */; };
+		EB3DDBF42BDBCB8500A5D265 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DDBF32BDBCB8500A5D265 /* UIViewController+Ext.swift */; };
+		EB3DDBF62BDBDD1D00A5D265 /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DDBF52BDBDD1D00A5D265 /* BaseViewModelDelegate.swift */; };
+		EB3DDBF82BDBDD3500A5D265 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DDBF72BDBDD3500A5D265 /* BaseViewControllerDelegate.swift */; };
 		EB9545832BD90FE100A7D084 /* AlfaSlabOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB9545822BD90FE100A7D084 /* AlfaSlabOne-Regular.ttf */; };
 		EB9545862BD917BA00A7D084 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9545852BD917BA00A7D084 /* CustomTextField.swift */; };
 		EB9545882BD92FE400A7D084 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9545872BD92FE400A7D084 /* UILabel+Ext.swift */; };
@@ -89,6 +93,10 @@
 		EB17CBCE2BD80F9B00FAABF8 /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		EB17CBD02BD8245A00FAABF8 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		EB17CBD42BD8677D00FAABF8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EB3120B02BDE524A0015E787 /* LaunchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewModel.swift; sourceTree = "<group>"; };
+		EB3DDBF32BDBCB8500A5D265 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		EB3DDBF52BDBDD1D00A5D265 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
+		EB3DDBF72BDBDD3500A5D265 /* BaseViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDelegate.swift; sourceTree = "<group>"; };
 		EB9545822BD90FE100A7D084 /* AlfaSlabOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlfaSlabOne-Regular.ttf"; sourceTree = "<group>"; };
 		EB9545852BD917BA00A7D084 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		EB9545872BD92FE400A7D084 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
@@ -185,6 +193,7 @@
 		EB17CB922BD670EF00FAABF8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EB3DDBF22BDBC70D00A5D265 /* Components */,
 				EB17CBCB2BD80D1800FAABF8 /* Theme */,
 				EB17CBB22BD7CEA000FAABF8 /* Localization */,
 				EB17CBB12BD7B3F700FAABF8 /* Fonts */,
@@ -217,8 +226,8 @@
 		EB17CB952BD67BF900FAABF8 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				EB17CB6C2BD66E4000FAABF8 /* LaunchScreen.storyboard */,
-				EB17CB9D2BD69A8E00FAABF8 /* LaunchScreenViewController.swift */,
+				EB3120AF2BDE52290015E787 /* ViewModel */,
+				EB3120AE2BDE52200015E787 /* View */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -228,6 +237,8 @@
 			children = (
 				EB9545902BDA5DDE00A7D084 /* Managers */,
 				EB17CBA02BD69BB200FAABF8 /* Weakifiable.swift */,
+				EB3DDBF52BDBDD1D00A5D265 /* BaseViewModelDelegate.swift */,
+				EB3DDBF72BDBDD3500A5D265 /* BaseViewControllerDelegate.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -239,6 +250,7 @@
 				EB17CBA52BD69CB000FAABF8 /* CGFloat+Ext.swift */,
 				EB17CBCE2BD80F9B00FAABF8 /* UIFont+Ext.swift */,
 				EB9545872BD92FE400A7D084 /* UILabel+Ext.swift */,
+				EB3DDBF32BDBCB8500A5D265 /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -362,11 +374,35 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		EB9545842BD9179400A7D084 /* Views */ = {
+		EB3120AE2BDE52200015E787 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB17CB9D2BD69A8E00FAABF8 /* LaunchScreenViewController.swift */,
+				EB17CB6C2BD66E4000FAABF8 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB3120AF2BDE52290015E787 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB3120B02BDE524A0015E787 /* LaunchScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EB3DDBF22BDBC70D00A5D265 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				EB9545852BD917BA00A7D084 /* CustomTextField.swift */,
 				EB9545892BD9331A00A7D084 /* CustomButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EB9545842BD9179400A7D084 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -530,6 +566,7 @@
 			files = (
 				EB17CBD52BD8677D00FAABF8 /* LoginViewController.swift in Sources */,
 				EB17CBA62BD69CB000FAABF8 /* CGFloat+Ext.swift in Sources */,
+				EB3120B12BDE524A0015E787 /* LaunchScreenViewModel.swift in Sources */,
 				EB95458D2BD958D100A7D084 /* LoginViewModel.swift in Sources */,
 				EB17CBA92BD69D3B00FAABF8 /* AppConstants.swift in Sources */,
 				EB17CBD12BD8245A00FAABF8 /* UserDefaultsManager.swift in Sources */,
@@ -542,6 +579,7 @@
 				EB17CBA42BD69BF700FAABF8 /* UIView+Ext.swift in Sources */,
 				EB9545922BDA5DF600A7D084 /* ValidationManager.swift in Sources */,
 				EB95458A2BD9331A00A7D084 /* CustomButton.swift in Sources */,
+				EB3DDBF42BDBCB8500A5D265 /* UIViewController+Ext.swift in Sources */,
 				EB17CBC52BD8060300FAABF8 /* OnboardModel.swift in Sources */,
 				EB17CB9E2BD69A8E00FAABF8 /* LaunchScreenViewController.swift in Sources */,
 				EB17CBAC2BD6A34B00FAABF8 /* TabBarViewController.swift in Sources */,
@@ -551,6 +589,8 @@
 				EB17CBCD2BD80D2100FAABF8 /* Theme.swift in Sources */,
 				EB17CBCA2BD8062D00FAABF8 /* OnboardViewModel.swift in Sources */,
 				EB17CBBF2BD7E04B00FAABF8 /* L10N.swift in Sources */,
+				EB3DDBF82BDBDD3500A5D265 /* BaseViewControllerDelegate.swift in Sources */,
+				EB3DDBF62BDBDD1D00A5D265 /* BaseViewModelDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

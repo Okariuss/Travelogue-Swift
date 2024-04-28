@@ -49,7 +49,7 @@ final class CustomTextField: UITextField {
         let button = UIButton(type: .custom)
         button.setImage(AppConstants.SystemImages.showPassword.normal, for: .normal)
         button.setImage(AppConstants.SystemImages.hidePassword.normal, for: .selected)
-        button.tintColor = .systemGray4
+        button.tintColor = .text
         return button
     }()
     

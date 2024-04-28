@@ -7,73 +7,37 @@
 
 import UIKit
 
-protocol OnboardViewControllerDelegate: AnyObject {
-    func configure()
+protocol OnboardViewControllerDelegate: BaseViewControllerDelegate {
     func updateUI(model: OnboardModel, index: Int)
-    func navigateScreen()
 }
 
 final class OnboardViewController: UIViewController {
     
-    private let imageView: UIImageView = {
-        let imageView = UIImageView(image: AppConstants.Images.onboard1.toImage)
-        imageView.contentMode = .scaleAspectFit
-        return imageView
+    private lazy var imageView: UIImageView = {
+        return addImageView(image: AppConstants.Images.onboard1.toImage)
     }()
     
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.text = L10N.onboardFirstHeader
-        label.textColor = .black
-        label.font = Theme.defaultTheme().themeFont.largeTitleFont
-        label.textAlignment = .center
-        return label
+    private lazy var titleLabel: UILabel = {
+            return addLabel(text: L10N.onboardFirstHeader, color: .black, font: Theme.defaultTheme().themeFont.largeTitleFont)
+        }()
+    
+    private lazy var subtitleLabel: UILabel = {
+        return addLabel(text: L10N.onboardFirstSubtitle, color: .black, font: Theme.defaultTheme().themeFont.bodyFont)
     }()
     
-    private let subtitleLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.text = L10N.onboardFirstSubtitle
-        label.textColor = .black
-        label.font = Theme.defaultTheme().themeFont.bodyFont
-        label.textAlignment = .center
-        return label
+    private lazy var backBtn: UIButton = {
+        return addButton(hasImage: true, image: AppConstants.SystemImages.back.normal, tintColor: .text, method: #selector(didTapBackBtn))
     }()
     
-    private let backBtn: UIButton = {
-        let button = UIButton(type: .system)
-        let originalImage = AppConstants.SystemImages.back.normal
-        
-        let tintedImage = originalImage.withRenderingMode(.alwaysTemplate)
-        button.setImage(tintedImage, for: .normal)
-        
-        button.tintColor = .systemGray4
-        
-        return button
+    private lazy var pageControl: UIPageControl = {
+        return addPageControl(pages: 3, currentIndicatorColor: .text, method: #selector(pageControlValueChanged))
     }()
     
-    private let pageControl: UIPageControl = {
-        let pageControl = UIPageControl(frame: .zero)
-        pageControl.numberOfPages = 3
-        pageControl.currentPageIndicatorTintColor = .systemGray4
-        
-        return pageControl
+    private lazy var nextBtn: UIButton = {
+        return addButton(hasImage: true, image: AppConstants.SystemImages.next.normal, tintColor: .text, method: #selector(didTapNextBtn))
     }()
     
-    private let nextBtn: UIButton = {
-        let button = UIButton(type: .system)
-        let originalImage = AppConstants.SystemImages.next.normal
-        
-        let tintedImage = originalImage.withRenderingMode(.alwaysTemplate)
-        button.setImage(tintedImage, for: .normal)
-        
-        button.tintColor = .systemGray4
-        
-        return button
-    }()
-    
-    private lazy var viewModel = OnboardViewModel()
+    private lazy var viewModel: OnboardViewModel<OnboardViewController> = OnboardViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,10 +86,6 @@ extension OnboardViewController: OnboardViewControllerDelegate {
             nextBtn.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             nextBtn.centerYAnchor.constraint(equalTo: backBtn.centerYAnchor)
         ])
-        
-        backBtn.addTarget(self, action: #selector(didTapBackBtn), for: .touchUpInside)
-        nextBtn.addTarget(self, action: #selector(didTapNextBtn), for: .touchUpInside)
-        pageControl.addTarget(self, action: #selector(pageControlValueChanged), for: .valueChanged)
     }
     
     func updateUI(model: OnboardModel, index: Int) {
@@ -137,14 +97,11 @@ extension OnboardViewController: OnboardViewControllerDelegate {
         }
     }
 
-    func navigateScreen() {
+    func navigateScreen(_ vc: UIViewController) {
         DispatchQueue.main.async {
-            let isLoginManager = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isLogin.rawValue)
-            let viewController = (isLoginManager.value ?? false) ? TabBarViewController() : LoginViewController()
-            viewController.modalPresentationStyle = .fullScreen
-            viewController.modalTransitionStyle = .flipHorizontal
-            self.present(viewController, animated: true)
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .flipHorizontal
+            self.present(vc, animated: true)
         }
-        
     }
 }
