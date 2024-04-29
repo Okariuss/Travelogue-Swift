@@ -45,15 +45,15 @@ final class OnboardViewController: UIViewController {
         viewModel.viewDidLoad()
     }
     
-    @objc func didTapBackBtn() {
+    @objc private func didTapBackBtn() {
         viewModel.didTapBack()
     }
     
-    @objc func pageControlValueChanged(_ sender: UIPageControl) {
+    @objc private func pageControlValueChanged(_ sender: UIPageControl) {
         viewModel.didSelectPage(at: sender.currentPage)
     }
     
-    @objc func didTapNextBtn() {
+    @objc private func didTapNextBtn() {
         viewModel.didTapNext()
     }
 }

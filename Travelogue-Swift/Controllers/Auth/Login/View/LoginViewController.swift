@@ -37,11 +37,11 @@ final class LoginViewController: UIViewController {
     private lazy var googleSignInButton = CustomButton(gradientColors: [.systemBlue, .white], title: L10N.loginGoogleSignIn)
     
     private lazy var dontHaveAccountLabel: UILabel = {
-        return addLabel(isUnderlined: true ,text: L10N.loginDontHaveAccount)
+        return addLabel(text: L10N.loginDontHaveAccount)
     }()
     
     private lazy var signUpLabel: UILabel = {
-        return addLabel(text: L10N.loginSignUp)
+        return addLabel(isUnderlined: true, text: L10N.loginSignUp)
     }()
     
     private lazy var viewModel: LoginViewModel<LoginViewController> = LoginViewModel()
@@ -78,9 +78,9 @@ extension LoginViewController: LoginViewControllerDelegate {
     }
     
     func navigateScreen(_ vc: UIViewController) {
-        vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .coverVertical
-        present(vc, animated: true)
+        self.navigationController?.navigationBar.tintColor = .text
+        self.navigationController?.modalTransitionStyle = .partialCurl
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     private func animateTransition(imageCons: [NSLayoutConstraint], textCons: [NSLayoutConstraint]) {

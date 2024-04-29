@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol LaunchScreenViewModelDelegate: BaseViewModelDelegate {
     
@@ -26,7 +27,12 @@ extension LaunchScreenViewModel: LaunchScreenViewModelDelegate {
         let isLoginManager = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isLogin.rawValue)
         
         let viewController = (isFirstManager.value ?? true) ? OnboardViewController() : ((isLoginManager.value ?? false) ? TabBarViewController() : LoginViewController())
-        view?.navigateScreen(viewController)
+        let navController = UINavigationController(rootViewController: viewController)
+        navController.navigationBar.tintColor = .text
+//        navController.navigationBar.isHidden = false
+//        navController.navigationBar.backgroundColor = .red
+//        navController.navigationBar.barTintColor = .text
+        view?.navigateScreen(navController)
     }
     
 }

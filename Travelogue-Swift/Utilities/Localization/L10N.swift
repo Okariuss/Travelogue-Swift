@@ -22,13 +22,17 @@ final class L10N {
     static let onboardThirdSubtitle = NSLocalizedString("onboard.thirdSubtitle", comment: "Onboard Third Subtitle")
     
     static let loginWelcomeBack = NSLocalizedString("login.welcomeBack", comment: "Welcome Back")
-        static let loginSignInContinue = NSLocalizedString("login.signInContinue", comment: "Sign in to continue")
-        static let loginEmail = NSLocalizedString("login.email", comment: "E-mail")
-        static let loginPassword = NSLocalizedString("login.password", comment: "Password")
-        static let loginForgotPassword = NSLocalizedString("login.forgotPassword", comment: "Forgot Password")
-        static let loginSignIn = NSLocalizedString("login.signIn", comment: "SIGN IN")
-        static let loginGoogleSignIn = NSLocalizedString("login.googleSignIn", comment: "GOOGLE SIGN IN")
-        static let loginDontHaveAccount = NSLocalizedString("login.dontHaveAccount", comment: "Don't you have an account? ")
-        static let loginSignUp = NSLocalizedString("login.signUp", comment: "Sign Up")
-
+    static let loginSignInContinue = NSLocalizedString("login.signInContinue", comment: "Sign in to continue")
+    static let loginEmail = NSLocalizedString("login.email", comment: "E-mail")
+    static let loginPassword = NSLocalizedString("login.password", comment: "Password")
+    static let loginForgotPassword = NSLocalizedString("login.forgotPassword", comment: "Forgot Password")
+    static let loginSignIn = NSLocalizedString("login.signIn", comment: "SIGN IN")
+    static let loginGoogleSignIn = NSLocalizedString("login.googleSignIn", comment: "GOOGLE SIGN IN")
+    static let loginDontHaveAccount = NSLocalizedString("login.dontHaveAccount", comment: "Don't you have an account? ")
+    static let loginSignUp = NSLocalizedString("login.signUp", comment: "Sign Up")
+    
+    static let forgotPasswordLabel = NSLocalizedString("login.forgotPassword", comment: "Forgot Password")
+    static let forgotPasswordDescription = NSLocalizedString("forgotPassword.description", comment: "Forgot password descriptin")
+    static let forgotPasswordReset = NSLocalizedString("forgotPassword.reset", comment: "Forgot password reset button")
+    
 }

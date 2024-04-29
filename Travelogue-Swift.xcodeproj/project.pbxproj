@@ -34,6 +34,8 @@
 		EB17CBD12BD8245A00FAABF8 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBD02BD8245A00FAABF8 /* UserDefaultsManager.swift */; };
 		EB17CBD52BD8677D00FAABF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17CBD42BD8677D00FAABF8 /* LoginViewController.swift */; };
 		EB3120B12BDE524A0015E787 /* LaunchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3120B02BDE524A0015E787 /* LaunchScreenViewModel.swift */; };
+		EB3120B62BDE63AD0015E787 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3120B52BDE63AD0015E787 /* ForgotPasswordViewController.swift */; };
+		EB3120BA2BDE640C0015E787 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3120B92BDE640C0015E787 /* ForgotPasswordViewModel.swift */; };
 		EB3DDBF42BDBCB8500A5D265 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DDBF32BDBCB8500A5D265 /* UIViewController+Ext.swift */; };
 		EB3DDBF62BDBDD1D00A5D265 /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DDBF52BDBDD1D00A5D265 /* BaseViewModelDelegate.swift */; };
 		EB3DDBF82BDBDD3500A5D265 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DDBF72BDBDD3500A5D265 /* BaseViewControllerDelegate.swift */; };
@@ -94,6 +96,8 @@
 		EB17CBD02BD8245A00FAABF8 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		EB17CBD42BD8677D00FAABF8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB3120B02BDE524A0015E787 /* LaunchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewModel.swift; sourceTree = "<group>"; };
+		EB3120B52BDE63AD0015E787 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		EB3120B92BDE640C0015E787 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		EB3DDBF32BDBCB8500A5D265 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		EB3DDBF52BDBDD1D00A5D265 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
 		EB3DDBF72BDBDD3500A5D265 /* BaseViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 		EB17CBC02BD8052200FAABF8 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				EB3120B22BDE63430015E787 /* ForgotPassword */,
 				EB17CBD22BD8674C00FAABF8 /* Login */,
 				EB17CBC12BD8053600FAABF8 /* Onboard */,
 			);
@@ -387,6 +392,31 @@
 			isa = PBXGroup;
 			children = (
 				EB3120B02BDE524A0015E787 /* LaunchScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EB3120B22BDE63430015E787 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				EB3120B42BDE639B0015E787 /* ViewModel */,
+				EB3120B32BDE63960015E787 /* View */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		EB3120B32BDE63960015E787 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB3120B52BDE63AD0015E787 /* ForgotPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB3120B42BDE639B0015E787 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB3120B92BDE640C0015E787 /* ForgotPasswordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -572,10 +602,12 @@
 				EB17CBD12BD8245A00FAABF8 /* UserDefaultsManager.swift in Sources */,
 				EB17CBC32BD805AD00FAABF8 /* OnboardViewController.swift in Sources */,
 				EB9545862BD917BA00A7D084 /* CustomTextField.swift in Sources */,
+				EB3120B62BDE63AD0015E787 /* ForgotPasswordViewController.swift in Sources */,
 				EB17CBA12BD69BB200FAABF8 /* Weakifiable.swift in Sources */,
 				EB17CB5F2BD66E3E00FAABF8 /* AppDelegate.swift in Sources */,
 				EB17CB612BD66E3E00FAABF8 /* SceneDelegate.swift in Sources */,
 				EB17CBAF2BD6A38E00FAABF8 /* HomeViewController.swift in Sources */,
+				EB3120BA2BDE640C0015E787 /* ForgotPasswordViewModel.swift in Sources */,
 				EB17CBA42BD69BF700FAABF8 /* UIView+Ext.swift in Sources */,
 				EB9545922BDA5DF600A7D084 /* ValidationManager.swift in Sources */,
 				EB95458A2BD9331A00A7D084 /* CustomButton.swift in Sources */,
