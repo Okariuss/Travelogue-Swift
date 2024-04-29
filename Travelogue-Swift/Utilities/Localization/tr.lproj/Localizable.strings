@@ -28,3 +28,12 @@
 
 "forgotPassword.description" = "Şifrenizi unuttuysanız, endişelenmeyin! Sadece e-postanızı doldurun, size şifrenizi sıfırlamanız için bir bağlantı göndereceğiz.";
 "forgotPassword.reset" = "ŞİFREYİ SIFIRLA";
+
+"signUp.description" = "Devam etmek için kaydolun";
+"signUp.name" = "İsim";
+"signUp.surname" = "Soyisim";
+"signUp.next" = "İleri";
+"signUp.haveAccount" = "Zaten bir hesabınız mı var? ";
+"signUp.dateOfBirthday" = "Doğum Tarihi";
+"signUp.confirmPassword" = "Şifreyi Doğrula";
+"signUp.createAccount" = "Hesap Oluştur";

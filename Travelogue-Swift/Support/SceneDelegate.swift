@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.backgroundColor = .background
+//        window?.backgroundColor = .background
         window?.windowScene = windowScene
         
         // Set the initial view controller to LaunchScreenViewController

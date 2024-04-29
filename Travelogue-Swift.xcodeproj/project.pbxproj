@@ -39,6 +39,11 @@
 		EB3DDBF42BDBCB8500A5D265 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DDBF32BDBCB8500A5D265 /* UIViewController+Ext.swift */; };
 		EB3DDBF62BDBDD1D00A5D265 /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DDBF52BDBDD1D00A5D265 /* BaseViewModelDelegate.swift */; };
 		EB3DDBF82BDBDD3500A5D265 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DDBF72BDBDD3500A5D265 /* BaseViewControllerDelegate.swift */; };
+		EB7E54DB2BDF905000547EBB /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E54DA2BDF905000547EBB /* SignUpViewModel.swift */; };
+		EB7E54DD2BDF905C00547EBB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E54DC2BDF905C00547EBB /* SignUpViewController.swift */; };
+		EB7E54DF2BDFA17700547EBB /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E54DE2BDFA17700547EBB /* SignUp2ViewController.swift */; };
+		EB7E54E12BDFAD2600547EBB /* SignUp2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E54E02BDFAD2600547EBB /* SignUp2ViewModel.swift */; };
+		EB7E54E32BDFB3BF00547EBB /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E54E22BDFB3BF00547EBB /* CustomDatePicker.swift */; };
 		EB9545832BD90FE100A7D084 /* AlfaSlabOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB9545822BD90FE100A7D084 /* AlfaSlabOne-Regular.ttf */; };
 		EB9545862BD917BA00A7D084 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9545852BD917BA00A7D084 /* CustomTextField.swift */; };
 		EB9545882BD92FE400A7D084 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9545872BD92FE400A7D084 /* UILabel+Ext.swift */; };
@@ -101,6 +106,11 @@
 		EB3DDBF32BDBCB8500A5D265 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		EB3DDBF52BDBDD1D00A5D265 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
 		EB3DDBF72BDBDD3500A5D265 /* BaseViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDelegate.swift; sourceTree = "<group>"; };
+		EB7E54DA2BDF905000547EBB /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		EB7E54DC2BDF905C00547EBB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EB7E54DE2BDFA17700547EBB /* SignUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
+		EB7E54E02BDFAD2600547EBB /* SignUp2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewModel.swift; sourceTree = "<group>"; };
+		EB7E54E22BDFB3BF00547EBB /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		EB9545822BD90FE100A7D084 /* AlfaSlabOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlfaSlabOne-Regular.ttf"; sourceTree = "<group>"; };
 		EB9545852BD917BA00A7D084 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		EB9545872BD92FE400A7D084 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
@@ -313,6 +323,7 @@
 		EB17CBC02BD8052200FAABF8 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				EB7E54D72BDF902F00547EBB /* SignUp */,
 				EB3120B22BDE63430015E787 /* ForgotPassword */,
 				EB17CBD22BD8674C00FAABF8 /* Login */,
 				EB17CBC12BD8053600FAABF8 /* Onboard */,
@@ -426,8 +437,36 @@
 			children = (
 				EB9545852BD917BA00A7D084 /* CustomTextField.swift */,
 				EB9545892BD9331A00A7D084 /* CustomButton.swift */,
+				EB7E54E22BDFB3BF00547EBB /* CustomDatePicker.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		EB7E54D72BDF902F00547EBB /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EB7E54D92BDF904000547EBB /* ViewModel */,
+				EB7E54D82BDF903900547EBB /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		EB7E54D82BDF903900547EBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB7E54DC2BDF905C00547EBB /* SignUpViewController.swift */,
+				EB7E54DE2BDFA17700547EBB /* SignUp2ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB7E54D92BDF904000547EBB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB7E54DA2BDF905000547EBB /* SignUpViewModel.swift */,
+				EB7E54E02BDFAD2600547EBB /* SignUp2ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EB9545842BD9179400A7D084 /* Views */ = {
@@ -610,17 +649,22 @@
 				EB3120BA2BDE640C0015E787 /* ForgotPasswordViewModel.swift in Sources */,
 				EB17CBA42BD69BF700FAABF8 /* UIView+Ext.swift in Sources */,
 				EB9545922BDA5DF600A7D084 /* ValidationManager.swift in Sources */,
+				EB7E54DD2BDF905C00547EBB /* SignUpViewController.swift in Sources */,
 				EB95458A2BD9331A00A7D084 /* CustomButton.swift in Sources */,
 				EB3DDBF42BDBCB8500A5D265 /* UIViewController+Ext.swift in Sources */,
 				EB17CBC52BD8060300FAABF8 /* OnboardModel.swift in Sources */,
 				EB17CB9E2BD69A8E00FAABF8 /* LaunchScreenViewController.swift in Sources */,
 				EB17CBAC2BD6A34B00FAABF8 /* TabBarViewController.swift in Sources */,
 				EB9545882BD92FE400A7D084 /* UILabel+Ext.swift in Sources */,
+				EB7E54DB2BDF905000547EBB /* SignUpViewModel.swift in Sources */,
 				EB17CB692BD66E3E00FAABF8 /* Travelogue_Swift.xcdatamodeld in Sources */,
 				EB17CBCF2BD80F9B00FAABF8 /* UIFont+Ext.swift in Sources */,
+				EB7E54E32BDFB3BF00547EBB /* CustomDatePicker.swift in Sources */,
 				EB17CBCD2BD80D2100FAABF8 /* Theme.swift in Sources */,
 				EB17CBCA2BD8062D00FAABF8 /* OnboardViewModel.swift in Sources */,
 				EB17CBBF2BD7E04B00FAABF8 /* L10N.swift in Sources */,
+				EB7E54DF2BDFA17700547EBB /* SignUp2ViewController.swift in Sources */,
+				EB7E54E12BDFAD2600547EBB /* SignUp2ViewModel.swift in Sources */,
 				EB3DDBF82BDBDD3500A5D265 /* BaseViewControllerDelegate.swift in Sources */,
 				EB3DDBF62BDBDD1D00A5D265 /* BaseViewModelDelegate.swift in Sources */,
 			);

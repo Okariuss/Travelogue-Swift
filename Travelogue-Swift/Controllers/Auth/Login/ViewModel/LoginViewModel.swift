@@ -27,7 +27,7 @@ extension LoginViewModel: LoginViewModelDelegate {
     }
     
     func signUp() {
-        view?.navigateScreen(TabBarViewController())
+        view?.navigateScreen(SignUpViewController())
     }
     
 }

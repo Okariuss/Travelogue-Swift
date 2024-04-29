@@ -35,4 +35,12 @@ final class L10N {
     static let forgotPasswordDescription = NSLocalizedString("forgotPassword.description", comment: "Forgot password descriptin")
     static let forgotPasswordReset = NSLocalizedString("forgotPassword.reset", comment: "Forgot password reset button")
     
+    static let signUpDescription = NSLocalizedString("signUp.description", comment: "Sign up to continue")
+    static let signUpName = NSLocalizedString("signUp.name", comment: "Name")
+    static let signUpSurname = NSLocalizedString("signUp.surname", comment: "Surname")
+    static let signUpNext = NSLocalizedString("signUp.next", comment: "Next")
+    static let signUpHaveAccount = NSLocalizedString("signUp.haveAccount", comment: "Already have an account? ")
+    static let signUpDateOfBirthday = NSLocalizedString("signUp.dateOfBirthday", comment: "Date of Birthday")
+    static let signUpConfirmPassword = NSLocalizedString("signUp.confirmPassword", comment: "Confirm Password")
+    static let signUpCreateAccount = NSLocalizedString("signUp.createAccount", comment: "Create Account")
 }

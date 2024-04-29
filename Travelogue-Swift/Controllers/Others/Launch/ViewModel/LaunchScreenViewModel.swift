@@ -12,7 +12,7 @@ protocol LaunchScreenViewModelDelegate: BaseViewModelDelegate {
     
 }
 
-final class LaunchScreenViewModel <T: LaunchScreenViewControllerDelegate> {
+final class LaunchScreenViewModel <T: BaseViewControllerDelegate> {
     weak var view: T?
 }
 

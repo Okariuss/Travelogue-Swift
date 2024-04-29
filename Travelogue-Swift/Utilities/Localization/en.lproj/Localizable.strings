@@ -28,3 +28,12 @@
 
 "forgotPassword.description" = "Don't worry! Just fill in your e-mail and we will send you a link to reset your password";
 "forgotPassword.reset" = "RESET PASSWORD";
+
+"signUp.description" = "Sign up to continue";
+"signUp.name" = "Name";
+"signUp.surname" = "Surname";
+"signUp.next" = "Next";
+"signUp.haveAccount" = "Already have an account? ";
+"signUp.dateOfBirthday" = "Date of Birthday";
+"signUp.confirmPassword" = "Confirm Password";
+"signUp.createAccount" = "Create Account";

@@ -46,6 +46,7 @@ final class AppConstants {
         case key
         case showPassword
         case hidePassword
+        case card
         
         var rawValue: String {
             switch self {
@@ -63,6 +64,8 @@ final class AppConstants {
                 "eye"
             case .hidePassword:
                 "eye.slash"
+            case .card:
+                "person.text.rectangle"
             }
             
         }
@@ -208,6 +211,8 @@ final class AppConstants {
         case small
         case medium
         case large
+        case xLarge
+        case xxLarge
         
         var rawValue: CGFloat {
             switch self {
@@ -217,6 +222,10 @@ final class AppConstants {
                 60
             case .large:
                 80
+            case .xLarge:
+                120
+            case .xxLarge:
+                160
             }
         }
     }
