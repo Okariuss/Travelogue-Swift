@@ -60,6 +60,7 @@ final class OnboardViewController: UIViewController {
 
 extension OnboardViewController: OnboardViewControllerDelegate {
     func configure() {
+        view.backgroundColor = .background
         view.addSubviews(imageView, titleLabel, subtitleLabel, backBtn, pageControl, nextBtn)
         
         NSLayoutConstraint.activate([
@@ -103,5 +104,9 @@ extension OnboardViewController: OnboardViewControllerDelegate {
             vc.modalTransitionStyle = .flipHorizontal
             self.present(vc, animated: true)
         }
+    }
+    
+    func previousScreen() {
+        
     }
 }

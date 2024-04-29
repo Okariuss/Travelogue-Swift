@@ -64,6 +64,7 @@ final class LoginViewController: UIViewController {
 extension LoginViewController: LoginViewControllerDelegate {
     
     func configure() {
+        view.backgroundColor = .background
         setupTransition()
         
         forgotPasswordLabel.addGestureRecognizer(for: #selector(forgotPasswordTapped), target: self)
@@ -81,6 +82,10 @@ extension LoginViewController: LoginViewControllerDelegate {
         self.navigationController?.navigationBar.tintColor = .text
         self.navigationController?.modalTransitionStyle = .partialCurl
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func previousScreen() {
+        
     }
     
     private func animateTransition(imageCons: [NSLayoutConstraint], textCons: [NSLayoutConstraint]) {

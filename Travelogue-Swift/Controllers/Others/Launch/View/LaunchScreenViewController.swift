@@ -39,6 +39,7 @@ final class LaunchScreenViewController: UIViewController {
 
 extension LaunchScreenViewController: LaunchScreenViewControllerDelegate {
     func configure() {
+        view.backgroundColor = .background
         view.addSubviews(topAnimationView, bottomAnimationView, imageView, titleLabel, subtitleLabel)
         addAnimationToView(topAnimationView, at: .top)
         addAnimationToView(bottomAnimationView, at: .bottom)
@@ -52,6 +53,10 @@ extension LaunchScreenViewController: LaunchScreenViewControllerDelegate {
             vc.modalTransitionStyle = .flipHorizontal
             self.present(vc, animated: true)
         }
+    }
+    
+    func previousScreen() {
+        
     }
     
     private func addConstraintsForLabelsAndImage(_ topAnimationView: UIView, _ titleLabel: UILabel, _ subtitleLabel: UILabel, _ imageView: UIImageView) {

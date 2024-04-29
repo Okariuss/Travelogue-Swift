@@ -11,4 +11,5 @@ import UIKit
 protocol BaseViewControllerDelegate: AnyObject {
     func configure()
     func navigateScreen(_ vc: UIViewController)
+    func previousScreen()
 }

@@ -84,14 +84,11 @@ final class CustomTextField: UITextField {
     private func setupIcon() {
         addSubviews(iconImageView, passwordToggleButton)
         
-        
-        iconImageView.translatesAutoresizingMaskIntoConstraints = false // Add this line
         iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         iconImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
         iconImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
-        passwordToggleButton.translatesAutoresizingMaskIntoConstraints = false // Add this line
         passwordToggleButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         passwordToggleButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
     }

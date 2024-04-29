@@ -39,6 +39,7 @@ final class ForgotPasswordViewController: UIViewController {
 extension ForgotPasswordViewController: ForgotPasswordViewControllerDelegate {
     func configure() {
         view.backgroundColor = .background
+        
         view.addSubviews(imageView, forgotPasswordLabel, descriptionLabel, emailTextField, resetPasswordButton)
         
         NSLayoutConstraint.activate([
@@ -72,7 +73,11 @@ extension ForgotPasswordViewController: ForgotPasswordViewControllerDelegate {
     func navigateScreen(_ vc: UIViewController) {
         self.navigationController?.navigationBar.tintColor = .text
         self.navigationController?.modalTransitionStyle = .crossDissolve
-        self.navigationController?.pushViewController(vc, animated: false)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func previousScreen() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func resetTapped() {
