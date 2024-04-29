@@ -25,3 +25,6 @@
 "login.googleSignIn" = "GOOGLE İLE GİRİŞ YAP";
 "login.dontHaveAccount" = "Hesabınız yok mu? ";
 "login.signUp" = "Kayıt Ol";
+
+"forgotPassword.description" = "Şifrenizi unuttuysanız, endişelenmeyin! Sadece e-postanızı doldurun, size şifrenizi sıfırlamanız için bir bağlantı göndereceğiz.";
+"forgotPassword.reset" = "ŞİFREYİ SIFIRLA";

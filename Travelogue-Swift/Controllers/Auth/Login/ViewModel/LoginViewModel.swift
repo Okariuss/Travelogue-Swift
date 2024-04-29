@@ -23,7 +23,7 @@ extension LoginViewModel: LoginViewModelDelegate {
     }
     
     func forgotPassword() {
-        view?.navigateScreen(TabBarViewController())
+        view?.navigateScreen(ForgotPasswordViewController())
     }
     
     func signUp() {
