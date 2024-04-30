@@ -76,10 +76,6 @@ extension ForgotPasswordViewController: ForgotPasswordViewControllerDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func previousScreen() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     func resetTapped() {
         self.navigationController?.popViewController(animated: true)
     }

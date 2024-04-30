@@ -55,10 +55,6 @@ extension LaunchScreenViewController: LaunchScreenViewControllerDelegate {
         }
     }
     
-    func previousScreen() {
-        
-    }
-    
     private func addConstraintsForLabelsAndImage(_ topAnimationView: UIView, _ titleLabel: UILabel, _ subtitleLabel: UILabel, _ imageView: UIImageView) {
         
         NSLayoutConstraint.activate([

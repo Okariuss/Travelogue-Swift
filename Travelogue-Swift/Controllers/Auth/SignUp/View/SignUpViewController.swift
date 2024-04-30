@@ -110,8 +110,4 @@ extension SignUpViewController: SignUpViewControllerDelegate {
     func navigateScreen(_ vc: UIViewController) {
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    func previousScreen() {
-        self.navigationController?.popViewController(animated: true)
-    }
 }
