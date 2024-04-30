@@ -116,10 +116,6 @@ extension SignUp2ViewController: SignUp2ViewControllerDelegate {
         }
     }
     
-    func previousScreen() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     func signInButtonTapped() {
         self.navigationController?.popToRootViewController(animated: true)
     }

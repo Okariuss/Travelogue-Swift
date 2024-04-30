@@ -105,8 +105,4 @@ extension OnboardViewController: OnboardViewControllerDelegate {
             self.present(vc, animated: true)
         }
     }
-    
-    func previousScreen() {
-        
-    }
 }

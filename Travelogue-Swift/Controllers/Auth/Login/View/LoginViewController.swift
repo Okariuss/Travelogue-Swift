@@ -84,10 +84,6 @@ extension LoginViewController: LoginViewControllerDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func previousScreen() {
-        
-    }
-    
     private func animateTransition(imageCons: [NSLayoutConstraint], textCons: [NSLayoutConstraint]) {
         UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
             NSLayoutConstraint.deactivate(imageCons + textCons)

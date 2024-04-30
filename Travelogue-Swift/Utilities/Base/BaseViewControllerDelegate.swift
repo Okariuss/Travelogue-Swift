@@ -13,3 +13,9 @@ protocol BaseViewControllerDelegate: AnyObject {
     func navigateScreen(_ vc: UIViewController)
     func previousScreen()
 }
+
+extension BaseViewControllerDelegate where Self: UIViewController {
+    func previousScreen() {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
