@@ -10,3 +10,5 @@ This iOS application allows users to plan and book travel tickets and hotel acco
 - **Firebase:** Employs its capabilities for efficient database management and authentication.
 - **MVVM Architecture:** Adhered to for structuring the app's components.
 - **Protocol-Oriented Programming:** Implemented to enhance code modularity and extensibility.
+- **Lottie:** Integrated for captivating animations.
+- **iOSDropDown:** Incorporated for streamlined dropdown functionality.
