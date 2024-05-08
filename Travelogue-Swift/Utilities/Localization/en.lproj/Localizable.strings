@@ -8,6 +8,12 @@
 
 "launch.subtitle" = "Choose and Travel";
 
+"alert.ok" = "OK";
+"alert.errorTitle" = "Error";
+"alert.fillAll" = "Please fill in all fields.";
+"alert.invalidEmail" = "Please enter a valid email address.";
+"alert.invalidPassword" = "Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.";
+
 "onboard.skip" = "SKIP";
 "onboard.firstHeader" = "Want Travel?";
 "onboard.firstSubtitle" = "Decide where do you want to go, find your ticket and travel.";
@@ -33,6 +39,9 @@
 "signUp.name" = "Name";
 "signUp.surname" = "Surname";
 "signUp.next" = "Next";
+"signUp.gender" = "Gender";
+"signUp.male" = "Male";
+"signUp.female" = "Female";
 "signUp.haveAccount" = "Already have an account? ";
 "signUp.dateOfBirthday" = "Date of Birthday";
 "signUp.confirmPassword" = "Confirm Password";
