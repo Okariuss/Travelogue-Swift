@@ -27,3 +27,12 @@ enum GenderEnum: String, DropableEnum {
     }
 }
 
+extension GenderEnum {
+    static func fromIndex(_ index: Int) -> GenderEnum? {
+        switch index {
+        case 0: return .male
+        case 1: return .female
+        default: return nil
+        }
+    }
+}

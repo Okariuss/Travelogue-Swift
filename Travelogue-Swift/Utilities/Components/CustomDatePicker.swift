@@ -22,7 +22,7 @@ final class CustomDatePicker: UIControl {
         return imageView
     }()
     
-    private let datePicker: UIDatePicker = {
+    let datePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.datePickerMode = .date
         picker.tintColor = .text // Customize the picker color as needed
@@ -50,10 +50,6 @@ final class CustomDatePicker: UIControl {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override var intrinsicContentSize: CGSize {
-        return CGSize(width: UIView.noIntrinsicMetric, height: 50) // Adjust height as needed
     }
     
     private func setupIcon() {
@@ -89,7 +85,7 @@ final class CustomDatePicker: UIControl {
         layer.cornerRadius = 10
         layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner]
         layer.borderWidth = 1.0
-        layer.borderColor = UIColor.systemGray4.cgColor
+        layer.borderColor = UIColor.text.cgColor
         layer.masksToBounds = true
     }
     
@@ -98,7 +94,7 @@ final class CustomDatePicker: UIControl {
     }
     
     func setIcon(image: UIImage?) {
-        iconImageView.image = image?.withTintColor(.systemGray4, renderingMode: .alwaysOriginal)
+        iconImageView.image = image?.withTintColor(.text, renderingMode: .alwaysOriginal)
     }
 }
 

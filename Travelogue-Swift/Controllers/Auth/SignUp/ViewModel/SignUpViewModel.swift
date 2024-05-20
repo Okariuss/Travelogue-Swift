@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol SignUpViewModelDelegate: BaseViewModelDelegate {
-    func nextButtonTapped()
+protocol SignUpViewModelDelegate: BaseViewModelDelegate, ValidationManager {
+    func nextButtonTapped(name: String, surname: String, email: String, genderIndex: Int?)
     func backButtonTapped()
 }
 
@@ -21,11 +21,24 @@ extension SignUpViewModel: SignUpViewModelDelegate {
         view?.configure()
     }
     
-    func nextButtonTapped() {
-        view?.navigateScreen(SignUp2ViewController())
+    func nextButtonTapped(name: String, surname: String, email: String, genderIndex: Int?) {
+        validationCheck(name: name, surname: surname, email: email, genderIndex: genderIndex)
+        view?.navigateScreen(SignUp2ViewController(name: name, surname: surname, email: email, genderIndex: genderIndex))
     }
     
     func backButtonTapped() {
         view?.previousScreen()
+    }
+    
+    private func validationCheck(name: String, surname: String, email: String, genderIndex: Int?) {
+        guard !name.isEmpty, !surname.isEmpty, !email.isEmpty, (genderIndex != nil) else {
+            view?.showAlert(title: L10N.alertErrorTitle, message: L10N.alertFillAll, acceptAction: {})
+            return
+        }
+        
+        guard isValidEmail(email: email) else {
+            view?.showAlert(title: L10N.alertErrorTitle, message: L10N.alertInvalidEmail, acceptAction: {})
+            return
+        }
     }
 }

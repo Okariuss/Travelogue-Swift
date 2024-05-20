@@ -12,6 +12,12 @@ protocol SignUp2ViewControllerDelegate: BaseViewControllerDelegate {
 }
 
 final class SignUp2ViewController: UIViewController {
+    
+    private let name: String
+    private let surname: String
+    private let email: String
+    private let genderIndex: Int?
+    
     private lazy var imageView: UIImageView = {
         return addImageView(image: AppConstants.Images.appImage.toImage)
     }()
@@ -31,7 +37,7 @@ final class SignUp2ViewController: UIViewController {
     private lazy var confirmPasswordTextField = CustomTextField(type: .password(secure: true), placeholderText: L10N.signUpConfirmPassword, image: AppConstants.SystemImages.key.toSelected)
     
     private lazy var createAccountButton = CustomButton(gradientColors: [.background, .black], title: L10N.signUpCreateAccount)
-
+    
     private lazy var haveAccountLabel: UILabel = {
         return addLabel(text: L10N.signUpHaveAccount)
     }()
@@ -40,7 +46,19 @@ final class SignUp2ViewController: UIViewController {
         return addLabel(isUnderlined: true, text: L10N.loginSignIn.capitalized)
     }()
     
-    private lazy var viewModel: SignUp2ViewModel<SignUp2ViewController> = SignUp2ViewModel()
+    private lazy var viewModel: SignUp2ViewModel<SignUp2ViewController> = SignUp2ViewModel(name: name, surname: surname, email: email, genderIndex: genderIndex)
+    
+    init(name: String, surname: String, email: String, genderIndex: Int?) {
+        self.name = name
+        self.surname = surname
+        self.email = email
+        self.genderIndex = genderIndex
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +67,7 @@ final class SignUp2ViewController: UIViewController {
     }
     
     @objc private func didCreateAccountTapped() {
-        viewModel.signUpButtonTapped()
+        viewModel.signUpButtonTapped(date: datePicker.datePicker.date, password: passwordTextField.text!, confirmPassword: confirmPasswordTextField.text!)
     }
     
     @objc private func didSignInButtonTapped() {

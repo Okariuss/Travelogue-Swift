@@ -13,6 +13,7 @@
 "alert.fillAll" = "Lütfen tüm alanları doldurun.";
 "alert.invalidEmail" = "Lütfen geçerli bir e-mail adresi girin.";
 "alert.invalidPassword" = "Şifreniz en az 8 karakter uzunluğunda olmalı ve en az bir büyük harf, bir küçük harf, bir rakam ve bir özel karakter içermelidir.";
+"alert.passwordNotMatched" = "Şifreler eşleşmiyor.";
 
 "onboard.skip" = "ATLA";
 "onboard.firstHeader" = "Seyahat Etmek İster Misiniz?";

@@ -51,8 +51,7 @@ final class SignUpViewController: UIViewController {
     }
     
     @objc private func didTapNext() {
-        viewModel.validationCheck(name: nameTextField.text!, surname: surnameTextField.text!, email: emailTextField.text!, genderIndex: genderDropDown.dropDown.selectedIndex)
-        viewModel.nextButtonTapped()
+        viewModel.nextButtonTapped(name: nameTextField.text!, surname: surnameTextField.text!, email: emailTextField.text!, genderIndex: genderDropDown.dropDown.selectedIndex)
     }
     
     @objc private func didTapSignIn() {

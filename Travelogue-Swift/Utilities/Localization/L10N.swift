@@ -18,7 +18,8 @@ final class L10N {
     static let alertFillAll = NSLocalizedString("alert.fillAll", comment: "Please fill in all fields.")
     static let alertInvalidEmail = NSLocalizedString("alert.invalidEmail", comment: "Please enter a valid email address.")
     static let alertInvalidPassword = NSLocalizedString("alert.invalidPassword", comment: "Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.")
-    
+    static let alertPasswordNotMatchError = NSLocalizedString("alert.passwordNotMatched", comment: "The password and confirm password fields do not match.")
+
     static let onboardSkip = NSLocalizedString("onboard.skip", comment: "Onboard Screen Skip Button")
     static let onboardFirstHeader = NSLocalizedString("onboard.firstHeader", comment: "Onboard First Header")
     static let onboardFirstSubtitle = NSLocalizedString("onboard.firstSubtitle", comment: "Onboard First Subtitle")

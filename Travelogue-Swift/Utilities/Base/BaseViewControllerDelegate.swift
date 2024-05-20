@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol BaseViewControllerDelegate: AnyObject {
+protocol BaseViewControllerDelegate: AnyObject, AlertPresentable {
     func configure()
     func navigateScreen(_ vc: UIViewController)
     func previousScreen()

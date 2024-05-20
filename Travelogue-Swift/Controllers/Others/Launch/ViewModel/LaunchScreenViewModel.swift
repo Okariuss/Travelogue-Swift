@@ -29,9 +29,6 @@ extension LaunchScreenViewModel: LaunchScreenViewModelDelegate {
         let viewController = (isFirstManager.value ?? true) ? OnboardViewController() : ((isLoginManager.value ?? false) ? TabBarViewController() : LoginViewController())
         let navController = UINavigationController(rootViewController: viewController)
         navController.navigationBar.tintColor = .text
-//        navController.navigationBar.isHidden = false
-//        navController.navigationBar.backgroundColor = .red
-//        navController.navigationBar.barTintColor = .text
         view?.navigateScreen(navController)
     }
     
