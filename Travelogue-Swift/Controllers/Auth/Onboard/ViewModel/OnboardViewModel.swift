@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol OnboardViewModelDelegate: BaseViewModelDelegate {
     func didTapNext()
@@ -49,9 +50,9 @@ extension OnboardViewModel: OnboardViewModelDelegate {
         } else {
             var isFirst = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isFirst.rawValue)
             isFirst.value = false
-            let isLoginManager = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isLogin.rawValue)
-            let viewController = (isLoginManager.value ?? false) ? TabBarViewController() : LoginViewController()
-            view?.navigateScreen(viewController)
+            
+            let navController = UINavigationController(rootViewController: LoginViewController())
+            view?.navigateScreen(navController)
         }
     }
     
