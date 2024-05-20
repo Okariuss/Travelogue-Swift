@@ -5,13 +5,6 @@
 //  Created by Okan Orkun on 24.04.2024.
 //
 
-//
-//  CustomTextField.swift
-//  Travelogue-Swift
-//
-//  Created by Okan Orkun on 24.04.2024.
-//
-
 import UIKit
 
 protocol IconProviding {
@@ -57,7 +50,7 @@ final class CustomTextField: UITextField {
     var placeholderText: String?
     var placeholderColor: UIColor?
     
-    init(type: TextFieldType, placeholderText: String, placeholderColor: UIColor = .systemGray3, image: UIImage) {
+    init(type: TextFieldType, placeholderText: String, placeholderColor: UIColor = .text, image: UIImage) {
         self.type = type
         self.placeholderText = placeholderText
         self.placeholderColor = placeholderColor
@@ -97,7 +90,7 @@ final class CustomTextField: UITextField {
         layer.cornerRadius = 10
         layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner]
         layer.borderWidth = 1.0
-        layer.borderColor = UIColor.systemGray4.cgColor
+        layer.borderColor = UIColor.text.cgColor
         layer.masksToBounds = true
     }
     
@@ -106,7 +99,7 @@ final class CustomTextField: UITextField {
 // MARK: - IconProviding Extension
 extension CustomTextField: IconProviding {
     func setIcon(image: UIImage?) {
-        iconImageView.image = image?.withTintColor(.systemGray4, renderingMode: .alwaysOriginal)
+        iconImageView.image = image?.withTintColor(.text, renderingMode: .alwaysOriginal)
     }
 }
 

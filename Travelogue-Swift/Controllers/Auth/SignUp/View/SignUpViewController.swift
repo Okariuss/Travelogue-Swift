@@ -30,6 +30,8 @@ final class SignUpViewController: UIViewController {
     
     private lazy var emailTextField = CustomTextField(type: .email, placeholderText: L10N.loginEmail, image: AppConstants.SystemImages.mail.toSelected)
     
+    private lazy var genderDropDown = CustomDropDown(image: AppConstants.SystemImages.gender.normal, placeholder: L10N.signUpGender, options: [GenderEnum.male, GenderEnum.female])
+    
     private lazy var nextButton = CustomButton(gradientColors: [.background, .black], title: L10N.signUpNext)
     
     private lazy var haveAccountLabel: UILabel = {
@@ -49,7 +51,7 @@ final class SignUpViewController: UIViewController {
     }
     
     @objc private func didTapNext() {
-        viewModel.nextButtonTapped()
+        viewModel.nextButtonTapped(name: nameTextField.text!, surname: surnameTextField.text!, email: emailTextField.text!, genderIndex: genderDropDown.dropDown.selectedIndex)
     }
     
     @objc private func didTapSignIn() {
@@ -62,7 +64,7 @@ extension SignUpViewController: SignUpViewControllerDelegate {
     func configure() {
         view.backgroundColor = .background
         
-        view.addSubviews(imageView, welcomeTextLabel, signUpDescriptionLabel, nameTextField, surnameTextField, emailTextField, nextButton, haveAccountLabel, signInLabel)
+        view.addSubviews(imageView, welcomeTextLabel, signUpDescriptionLabel, nameTextField, surnameTextField, emailTextField, genderDropDown, nextButton, haveAccountLabel, signInLabel)
         
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -91,10 +93,15 @@ extension SignUpViewController: SignUpViewControllerDelegate {
             emailTextField.trailingAnchor.constraint(equalTo: surnameTextField.trailingAnchor),
             emailTextField.heightAnchor.constraint(equalTo: surnameTextField.heightAnchor),
             
-            nextButton.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: AppConstants.Spacing.small.rawValue),
-            nextButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
-            nextButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-            nextButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            genderDropDown.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: AppConstants.Spacing.small.rawValue),
+            genderDropDown.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            genderDropDown.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            genderDropDown.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            
+            nextButton.topAnchor.constraint(equalTo: genderDropDown.bottomAnchor, constant: AppConstants.Spacing.small.rawValue),
+            nextButton.leadingAnchor.constraint(equalTo: genderDropDown.leadingAnchor),
+            nextButton.trailingAnchor.constraint(equalTo: genderDropDown.trailingAnchor),
+            nextButton.heightAnchor.constraint(equalTo: genderDropDown.heightAnchor),
             
             haveAccountLabel.topAnchor.constraint(equalTo: nextButton.bottomAnchor, constant: AppConstants.Spacing.medium.rawValue),
             haveAccountLabel.leadingAnchor.constraint(equalTo: nextButton.leadingAnchor),

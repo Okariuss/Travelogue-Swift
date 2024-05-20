@@ -42,11 +42,14 @@ final class AppConstants {
         case house
         case next
         case back
+        case down
+        case up
         case mail
         case key
         case showPassword
         case hidePassword
         case card
+        case gender
         
         var rawValue: String {
             switch self {
@@ -56,6 +59,10 @@ final class AppConstants {
                 "chevron.right"
             case .back:
                 "chevron.left"
+            case .down:
+                "chevron.down"
+            case .up:
+                "chevron.up"
             case .mail:
                 "envelope"
             case .key:
@@ -66,6 +73,8 @@ final class AppConstants {
                 "eye.slash"
             case .card:
                 "person.text.rectangle"
+            case .gender:
+                "figure.dress.line.vertical.figure"
             }
             
         }
