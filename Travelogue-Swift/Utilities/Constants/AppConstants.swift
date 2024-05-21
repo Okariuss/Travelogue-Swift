@@ -238,4 +238,26 @@ final class AppConstants {
             }
         }
     }
+    
+    enum Entities {
+        case userEntity
+        
+        var rawValue: String {
+            switch self {
+            case .userEntity:
+                "UserEntity"
+            }
+        }
+    }
+    
+    enum Collections {
+        case users
+        
+        var rawValue: String {
+            switch self {
+            case .users:
+                "Users"
+            }
+        }
+    }
 }

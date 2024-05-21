@@ -18,7 +18,7 @@ final class CoreDataManager<Entity: NSManagedObject> {
         self.persistentContainer = persistentContainer
     }
     
-    private var context: NSManagedObjectContext {
+    var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
     

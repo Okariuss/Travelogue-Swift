@@ -6,17 +6,29 @@
 //
 
 import UIKit
+import CoreData
 
 final class HomeViewController: UIViewController {
     
     private let coreDataManager = CoreDataManager<UserEntity>(entityName: "UserEntity")
     private var user: User?
     
+    private lazy var userInfoLabel: UILabel = {
+        return addLabel(text: "")
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubviews(userInfoLabel)
         setupBackground()
         fetchUserInfo()
-        setupUserInfoLabel()
+        updateUserInfoLabel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchUserInfo()
+        updateUserInfoLabel()
     }
     
     private func setupBackground() {
@@ -26,7 +38,6 @@ final class HomeViewController: UIViewController {
         backgroundImageView.clipsToBounds = true
         
         view.addSubviews(backgroundImageView)
-        
         view.sendSubviewToBack(backgroundImageView)
         
         NSLayoutConstraint.activate([
@@ -39,25 +50,29 @@ final class HomeViewController: UIViewController {
     
     private func fetchUserInfo() {
         if let userEntities = coreDataManager.fetchAll(), let userEntity = userEntities.first {
-            user = userEntity.toUser()
+            user = User(
+                name: userEntity.name ?? "",
+                surname: userEntity.surname ?? "",
+                email: userEntity.email ?? "",
+                dateOfBirth: userEntity.dateOfBirth ?? Date(),
+                gender: userEntity.gender ?? ""
+            )
+        } else {
+            user = nil
         }
     }
     
-    private func setupUserInfoLabel() {
-        guard let user = user else { return }
-        
-        let userInfoLabel = UILabel()
-        userInfoLabel.text = "Name: \(user.name)\nSurname: \(user.surname)\nEmail: \(user.email)\nDOB: \(user.dateOfBirth)\nGender: \(user.gender)"
-        userInfoLabel.numberOfLines = 0
-        userInfoLabel.textAlignment = .center
-        userInfoLabel.translatesAutoresizingMaskIntoConstraints = false
-        userInfoLabel.textColor = .text
-        
-        view.addSubview(userInfoLabel)
-        
-        NSLayoutConstraint.activate([
-            userInfoLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            userInfoLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
+    private func updateUserInfoLabel() {
+        if let user = user {
+            userInfoLabel.text = """
+            Name: \(user.name)
+            Surname: \(user.surname)
+            Email: \(user.email)
+            DOB: \(user.dateOfBirth)
+            Gender: \(user.gender)
+            """
+        } else {
+            userInfoLabel.text = "Not available user"
+        }
     }
 }

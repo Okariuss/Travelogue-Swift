@@ -32,6 +32,9 @@
 "login.googleSignIn" = "GOOGLE SIGN IN";
 "login.dontHaveAccount" = "Don't you have an account? ";
 "login.signUp" = "Sign Up";
+"login.error" = "Sign In Error";
+"login.errorMessage" = "User not found";
+"login.passwordError" = "Password is not correct";
 
 "forgotPassword.description" = "Don't worry! Just fill in your e-mail and we will send you a link to reset your password";
 "forgotPassword.reset" = "RESET PASSWORD";

@@ -9,15 +9,16 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 import FirebaseStorage
+import CoreData
 
 protocol AuthenticationService {
-    func signIn(user: User, password: String) async throws -> AuthDataResult
+    func signIn(email: String, password: String) async throws -> AuthDataResult
     func signUp(user: User, password: String) async throws -> AuthDataResult
 }
 
 protocol FirestoreService {
-    func saveData(data: [String: Any], collection: String, documentId: String?) async throws
-    func fetchData(collection: String) async throws -> [[String: Any]]
+    func saveData(data: NSManagedObject, collection: String, documentId: String?) async throws
+    func fetchData<Entity: NSManagedObject>(collection: String, context: NSManagedObjectContext) async throws -> [Entity]
 }
 
 protocol StorageService {
@@ -38,9 +39,9 @@ final class NetworkManager {
 // MARK: Authentication
 extension NetworkManager: AuthenticationService {
     
-    func signIn(user: User, password: String) async throws -> AuthDataResult {
+    func signIn(email: String, password: String) async throws -> AuthDataResult {
         do {
-            let result = try await Auth.auth().signIn(withEmail: user.email, password: password)
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
             return result
         } catch {
             throw error
@@ -60,7 +61,7 @@ extension NetworkManager: AuthenticationService {
 // MARK: Firestore
 extension NetworkManager: FirestoreService {
     
-    func saveData(data: [String : Any], collection: String, documentId: String?) async throws {
+    func saveData(data: NSManagedObject, collection: String, documentId: String?) async throws {
         do {
             var ref: DocumentReference!
             if let documentId = documentId {
@@ -68,20 +69,44 @@ extension NetworkManager: FirestoreService {
             } else {
                 ref = db.collection(collection).document()
             }
-            try await ref.setData(data)
+            
+            let attributes = data.entity.attributesByName
+            var userData = [String: Any]()
+            for (key, _) in attributes {
+                if let value = data.value(forKey: key) {
+                    userData[key] = value
+                }
+            }
+            
+            try await ref.setData(userData)
         } catch {
             throw error
         }
     }
+
     
-    func fetchData(collection: String) async throws -> [[String : Any]] {
-        do {
-            let querySnapshot = try await db.collection(collection).getDocuments()
-            let data = querySnapshot.documents.compactMap { $0.data() }
-            return data
-        } catch {
-            throw error
+    func fetchData<Entity: NSManagedObject>(collection: String, context: NSManagedObjectContext) async throws -> [Entity] {
+        let querySnapshot = try await db.collection(collection).getDocuments()
+        var entities = [Entity]()
+        
+        for document in querySnapshot.documents {
+            let entity = NSEntityDescription.insertNewObject(forEntityName: String(describing: Entity.self), into: context) as! Entity
+            let attributes = entity.entity.attributesByName
+            
+            for (key, _) in attributes {
+                if let value = document.data()[key] {
+                    if let timestamp = value as? Timestamp {
+                        entity.setValue(timestamp.dateValue(), forKey: key)
+                    } else {
+                        entity.setValue(value, forKey: key)
+                    }
+                }
+            }
+            
+            entities.append(entity)
         }
+        
+        return entities
     }
 }
 

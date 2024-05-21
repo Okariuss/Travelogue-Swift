@@ -16,6 +16,8 @@ protocol BaseViewControllerDelegate: AnyObject, AlertPresentable {
 
 extension BaseViewControllerDelegate where Self: UIViewController {
     func previousScreen() {
-        self.navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }

@@ -37,6 +37,9 @@ final class L10N {
     static let loginGoogleSignIn = NSLocalizedString("login.googleSignIn", comment: "GOOGLE SIGN IN")
     static let loginDontHaveAccount = NSLocalizedString("login.dontHaveAccount", comment: "Don't you have an account? ")
     static let loginSignUp = NSLocalizedString("login.signUp", comment: "Sign Up")
+    static let loginError = NSLocalizedString("login.error", comment: "Sign Up Error")
+    static let loginErrorMessage = NSLocalizedString("login.errorMessage", comment: "User not found")
+    static let loginPasswordError = NSLocalizedString("login.passwordError", comment: "Password is not correct")
     
     static let forgotPasswordLabel = NSLocalizedString("login.forgotPassword", comment: "Forgot Password")
     static let forgotPasswordDescription = NSLocalizedString("forgotPassword.description", comment: "Forgot password descriptin")

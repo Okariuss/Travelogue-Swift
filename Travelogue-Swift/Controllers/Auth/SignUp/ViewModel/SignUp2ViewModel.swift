@@ -20,7 +20,7 @@ final class SignUp2ViewModel<T: SignUp2ViewControllerDelegate> {
     private let surname: String
     private let email: String
     private let genderIndex: Int?
-    private let coreDataManager = CoreDataManager<UserEntity>(entityName: "UserEntity")
+    private let coreDataManager = CoreDataManager<UserEntity>(entityName: AppConstants.Entities.userEntity.rawValue)
     
     init(name: String, surname: String, email: String, genderIndex: Int?) {
         self.name = name
@@ -36,21 +36,30 @@ extension SignUp2ViewModel: SignUp2ViewModelDelegate {
     }
     
     func signUpButtonTapped(date: Date, password: String, confirmPassword: String) {
-        validationCheck(date: date, password: password, confirmPassword: confirmPassword)
-        let user = User(name: name, surname: surname, email: email, dateOfBirth: date, gender: GenderEnum.fromIndex(genderIndex!)!.displayName)
-        Task {
-            do {
-                let _ = try await NetworkManager.shared.signUp(user: user, password: password)
-                
-                let userEntity = coreDataManager.create()
-                userEntity.update(from: user)
-                coreDataManager.saveContext()
-                
-                var isLoginManager = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isLogin.rawValue)
-                isLoginManager.value = true
-                await view?.navigateScreen(TabBarViewController())
-            } catch {
-                view?.showAlert(title: "Sign Up Error", message: error.localizedDescription, acceptAction: {})
+        if validationCheck(date: date, password: password, confirmPassword: confirmPassword) {
+            let user = User(name: name, surname: surname, email: email, dateOfBirth: date, gender: GenderEnum.fromIndex(genderIndex!)!.displayName)
+            Task {
+                do {
+                    let authResult = try await NetworkManager.shared.signUp(user: user, password: password)
+                    
+                    let userEntity = coreDataManager.create()
+                    userEntity.update(from: user)
+                    coreDataManager.saveContext()
+                    
+                    try await NetworkManager.shared.saveData(data: userEntity, collection: AppConstants.Collections.users.rawValue, documentId: authResult.user.uid)
+                    
+                    var isLoginManager = UserDefaultsManager<Bool>(key: AppConstants.UserDefaultsEnums.isLogin.rawValue)
+                    isLoginManager.value = true
+                    
+                    DispatchQueue.main.async {
+                        self.view?.navigateScreen(TabBarViewController())
+                    }
+                    
+                } catch {
+                    DispatchQueue.main.async {
+                        self.view?.showAlert(title: "Sign Up Error", message: "Email and password didn't match", acceptAction: {})
+                    }
+                }
             }
         }
     }
@@ -63,21 +72,23 @@ extension SignUp2ViewModel: SignUp2ViewModelDelegate {
         view?.signInButtonTapped()
     }
     
-    private func validationCheck(date: Date, password: String, confirmPassword: String) {
+    private func validationCheck(date: Date, password: String, confirmPassword: String) -> Bool {
         
         guard !date.description.isEmpty, !password.isEmpty, !confirmPassword.isEmpty else {
             view?.showAlert(title: L10N.alertErrorTitle, message: L10N.alertFillAll, acceptAction: {})
-            return
+            return false
         }
         
         guard isValidPassword(password: password) else {
             view?.showAlert(title: L10N.alertErrorTitle, message: L10N.alertInvalidPassword, acceptAction: {})
-            return
+            return false
         }
         
         guard password == confirmPassword else {
             view?.showAlert(title: L10N.alertErrorTitle, message: L10N.alertPasswordNotMatchError, acceptAction: {})
-            return
+            return false
         }
+        
+        return true
     }
 }
