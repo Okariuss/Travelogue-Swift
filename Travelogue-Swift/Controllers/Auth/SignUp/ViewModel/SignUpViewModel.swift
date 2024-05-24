@@ -22,23 +22,25 @@ extension SignUpViewModel: SignUpViewModelDelegate {
     }
     
     func nextButtonTapped(name: String, surname: String, email: String, genderIndex: Int?) {
-        validationCheck(name: name, surname: surname, email: email, genderIndex: genderIndex)
-        view?.navigateScreen(SignUp2ViewController(name: name, surname: surname, email: email, genderIndex: genderIndex))
+        if validationCheck(name: name, surname: surname, email: email, genderIndex: genderIndex) {
+            view?.navigateScreen(SignUp2ViewController(name: name, surname: surname, email: email, genderIndex: genderIndex))
+        }
     }
     
     func backButtonTapped() {
         view?.previousScreen()
     }
     
-    private func validationCheck(name: String, surname: String, email: String, genderIndex: Int?) {
+    private func validationCheck(name: String, surname: String, email: String, genderIndex: Int?) -> Bool {
         guard !name.isEmpty, !surname.isEmpty, !email.isEmpty, (genderIndex != nil) else {
             view?.showAlert(title: L10N.alertErrorTitle, message: L10N.alertFillAll, acceptAction: {})
-            return
+            return false
         }
         
         guard isValidEmail(email: email) else {
             view?.showAlert(title: L10N.alertErrorTitle, message: L10N.alertInvalidEmail, acceptAction: {})
-            return
+            return false
         }
+        return true
     }
 }

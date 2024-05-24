@@ -9,6 +9,7 @@ import UIKit
 
 protocol LoginViewControllerDelegate: BaseViewControllerDelegate {
     func updateUI()
+    func navigateToMain(_ vc: UIViewController)
 }
 
 final class LoginViewController: UIViewController {
@@ -59,6 +60,14 @@ final class LoginViewController: UIViewController {
     @objc private func signUpTapped() {
         viewModel.signUp()
     }
+    
+    @objc private func signInTapped() {
+        viewModel.signIn(email: emailTextField.text!, password: passwordTextField.text!)
+    }
+    
+    @objc private func googleSignInTapped() {
+        viewModel.googleSignIn()
+    }
 }
 
 extension LoginViewController: LoginViewControllerDelegate {
@@ -69,7 +78,8 @@ extension LoginViewController: LoginViewControllerDelegate {
         
         forgotPasswordLabel.addGestureRecognizer(for: #selector(forgotPasswordTapped), target: self)
         signUpLabel.addGestureRecognizer(for: #selector(signUpTapped), target: self)
-
+        signInButton.addTarget(self, action: #selector(signInTapped), for: .touchUpInside)
+        googleSignInButton.addTarget(self, action: #selector(googleSignInTapped), for: .touchUpInside)
     }
     
     func updateUI() {
@@ -82,6 +92,14 @@ extension LoginViewController: LoginViewControllerDelegate {
         self.navigationController?.navigationBar.tintColor = .text
         self.navigationController?.modalTransitionStyle = .partialCurl
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func navigateToMain(_ vc: UIViewController) {
+        DispatchQueue.main.async {
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .flipHorizontal
+            self.present(vc, animated: true)
+        }
     }
     
     private func animateTransition(imageCons: [NSLayoutConstraint], textCons: [NSLayoutConstraint]) {
