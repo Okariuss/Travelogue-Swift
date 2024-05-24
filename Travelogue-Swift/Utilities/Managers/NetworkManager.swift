@@ -9,10 +9,14 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 import FirebaseStorage
+import FirebaseAuth
+import GoogleSignIn
+import GoogleSignInSwift
 import CoreData
 
 protocol AuthenticationService {
     func signIn(email: String, password: String) async throws -> AuthDataResult
+    func googleSignIn(_ vc: UIViewController) async throws -> AuthDataResult
     func signUp(user: User, password: String) async throws -> AuthDataResult
 }
 
@@ -42,6 +46,30 @@ extension NetworkManager: AuthenticationService {
     func signIn(email: String, password: String) async throws -> AuthDataResult {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            return result
+        } catch {
+            throw error
+        }
+    }
+    
+    func googleSignIn(_ vc: UIViewController) async throws -> AuthDataResult {
+        do {
+            guard let clientID = FirebaseApp.app()?.options.clientID else {
+                fatalError("No client ID found in Firebase Configuration")
+            }
+            let config = GIDConfiguration(clientID: clientID)
+            GIDSignIn.sharedInstance.configuration = config
+            
+            let gidSignInResult = try await GIDSignIn.sharedInstance.signIn(withPresenting: vc)
+            
+            guard let idToken = gidSignInResult.user.idToken?.tokenString else {
+                throw URLError(.badServerResponse)
+            }
+            let accessToken = gidSignInResult.user.accessToken.tokenString
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
+            
+            let result = try await Auth.auth().signIn(with: credential)
             return result
         } catch {
             throw error
