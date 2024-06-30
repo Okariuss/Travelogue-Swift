@@ -76,19 +76,19 @@ extension LoginViewModel: LoginViewModelDelegate {
     }
     
     private func handleGoogleSignIn() async throws {
-        guard let viewController = view as? UIViewController else { return }
-        
-        let result = try await NetworkManager.shared.googleSignIn(viewController)
+        let result = try await NetworkManager.shared.googleSignIn((view as! UIViewController))
         let userEntities: [UserEntity] = try await NetworkManager.shared.fetchData(collection: AppConstants.Collections.users.rawValue, context: coreDataManager.context)
         
-        if let userEntity = userEntities.first(where: { $0.email == result.user.email }) {
-            loginUser(userEntity: userEntity)
+        if userEntities.contains(where: { $0.email == result.user.email }) {
+            DispatchQueue.main.async {
+                self.view?.showAlert(title: L10N.loginError, message: L10N.signUpErrorMessage, acceptAction: {})
+            }
         } else {
-            try await createNewGoogleUser(result: result)
+            try await signInWithGoogle(result: result)
         }
     }
     
-    private func createNewGoogleUser(result: AuthDataResult) async throws {
+    private func signInWithGoogle(result: AuthDataResult) async throws {
         let user = User(
             name: result.user.displayName ?? "",
             surname: result.user.displayName ?? "",

@@ -50,3 +50,5 @@
 "signUp.dateOfBirthday" = "Date of Birthday";
 "signUp.confirmPassword" = "Confirm Password";
 "signUp.createAccount" = "Create Account";
+"signUp.error" = "Sign Up Error";
+"signUp.errorMessage" = "This email address is already in use by another account";
