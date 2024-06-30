@@ -57,7 +57,7 @@ extension SignUp2ViewModel: SignUp2ViewModelDelegate {
                     
                 } catch {
                     DispatchQueue.main.async {
-                        self.view?.showAlert(title: "Sign Up Error", message: "Email and password didn't match", acceptAction: {})
+                        self.view?.showAlert(title: L10N.signUpError, message: L10N.signUpErrorMessage, acceptAction: {})
                     }
                 }
             }

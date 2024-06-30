@@ -50,3 +50,5 @@
 "signUp.dateOfBirthday" = "Doğum Tarihi";
 "signUp.confirmPassword" = "Şifreyi Doğrula";
 "signUp.createAccount" = "Hesap Oluştur";
+"signUp.error" = "Kayıt Hatası";
+"signUp.errorMessage" = "Bu email başka bir hesap tarafından kullanılıyor";

@@ -56,4 +56,6 @@ final class L10N {
     static let signUpDateOfBirthday = NSLocalizedString("signUp.dateOfBirthday", comment: "Date of Birthday")
     static let signUpConfirmPassword = NSLocalizedString("signUp.confirmPassword", comment: "Confirm Password")
     static let signUpCreateAccount = NSLocalizedString("signUp.createAccount", comment: "Create Account")
+    static let signUpError = NSLocalizedString("signUp.error", comment: "Sign Up Error")
+    static let signUpErrorMessage = NSLocalizedString("signUp.errorMessage", comment: "This email address is already in use by another account")
 }
