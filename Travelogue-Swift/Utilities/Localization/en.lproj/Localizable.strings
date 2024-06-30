@@ -6,8 +6,10 @@
   
 */
 
+// MARK: APP
 "launch.subtitle" = "Choose and Travel";
 
+// MARK: Alert texts
 "alert.ok" = "OK";
 "alert.errorTitle" = "Error";
 "alert.fillAll" = "Please fill in all fields.";
@@ -15,6 +17,7 @@
 "alert.invalidPassword" = "Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.";
 "alert.passwordNotMatched" = "The password and confirm password fields do not match.";
 
+// MARK: Onboard texts
 "onboard.skip" = "SKIP";
 "onboard.firstHeader" = "Want Travel?";
 "onboard.firstSubtitle" = "Decide where do you want to go, find your ticket and travel.";
@@ -23,6 +26,7 @@
 "onboard.thirdHeader" = "Need Help?";
 "onboard.thirdSubtitle" = "You can contact us by mail, phone number or live chat. We will assist you in everything.";
 
+// MARK: Login texts
 "login.welcomeBack" = "Welcome Back";
 "login.signInContinue" = "Sign in to continue";
 "login.email" = "E-mail";
@@ -36,9 +40,13 @@
 "login.errorMessage" = "User not found";
 "login.passwordError" = "Password is not correct";
 
+// MARK: Forgot Password texts
 "forgotPassword.description" = "Don't worry! Just fill in your e-mail and we will send you a link to reset your password";
 "forgotPassword.reset" = "RESET PASSWORD";
+"forgotPassword.enterEmail" = "Please enter your e-mail";
+"forgotPassword.linkSended" = "Password reset link has been sent to your email";
 
+// MARK: Sign Up texts
 "signUp.description" = "Sign up to continue";
 "signUp.name" = "Name";
 "signUp.surname" = "Surname";
