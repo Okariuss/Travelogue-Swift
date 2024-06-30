@@ -32,7 +32,7 @@ final class ForgotPasswordViewController: UIViewController {
     }
     
     @objc private func didTap() {
-        viewModel.resetPasswordTapped()
+        viewModel.resetPasswordTapped(emailTextField)
     }
 }
 

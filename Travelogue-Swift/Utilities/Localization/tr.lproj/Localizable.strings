@@ -6,8 +6,10 @@
   
 */
 
+// MARK: APP
 "launch.subtitle" = "Seç ve Seyahat Et";
 
+// MARK: Alert texts
 "alert.ok" = "Tamam";
 "alert.errorTitle" = "Hata";
 "alert.fillAll" = "Lütfen tüm alanları doldurun.";
@@ -15,6 +17,7 @@
 "alert.invalidPassword" = "Şifreniz en az 8 karakter uzunluğunda olmalı ve en az bir büyük harf, bir küçük harf, bir rakam ve bir özel karakter içermelidir.";
 "alert.passwordNotMatched" = "Şifreler eşleşmiyor.";
 
+// MARK: Onboard texts
 "onboard.skip" = "ATLA";
 "onboard.firstHeader" = "Seyahat Etmek İster Misiniz?";
 "onboard.firstSubtitle" = "Nereye gitmek istediğinize karar verin, biletinizi bulun ve seyahat edin.";
@@ -23,6 +26,7 @@
 "onboard.thirdHeader" = "Yardıma mı İhtiyacınız Var?";
 "onboard.thirdSubtitle" = "Bize e-posta, telefon numarası veya canlı sohbet ile ulaşabilirsiniz. Her konuda size yardımcı olacağız.";
 
+// MARK: Login texts
 "login.welcomeBack" = "Hoş Geldiniz";
 "login.signInContinue" = "Devam etmek için giriş yapın";
 "login.email" = "E-posta";
@@ -36,9 +40,13 @@
 "login.errorMessage" = "Kullanıcı bulunamadı";
 "login.passwordError" = "Şifre hatalı";
 
+// MARK: Forgot password texts
 "forgotPassword.description" = "Şifrenizi unuttuysanız, endişelenmeyin! Sadece e-postanızı doldurun, size şifrenizi sıfırlamanız için bir bağlantı göndereceğiz.";
 "forgotPassword.reset" = "ŞİFREYİ SIFIRLA";
+"forgotPassword.enterEmail" = "Lütfen e-posta adresinizi giriniz";
+"forgotPassword.linkSended" = "Şifre sıfırlama linki, e-postanıza başarılı bir şekilde gönderilmiştir";
 
+// MARK: Sign Up texts
 "signUp.description" = "Devam etmek için kaydolun";
 "signUp.name" = "İsim";
 "signUp.surname" = "Soyisim";
